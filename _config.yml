@@ -1,0 +1,4 @@
+theme: jekyll-theme-cayman
+include: ['_pages']
+plugins:
+  - jekyll-redirect-from
