@@ -4,7 +4,58 @@ title: Endormorphismes d'un espace euclidien
 permalink: endomorphismes-d'un-espace-euclidien
 redirect_from:
     - endomorphismes-espace-euclidien
+    - endomorphismes-des-espaces-euclidiens
 ---
+
+---
+
+<h3 id="valeurs-propres-complexes-matrices-orthogonales">Valeurs propres complexes des matrices orthogonales</h3>
+
+Soit $M\in\mathcal{O}_n(\mathbb{R})$. Montrer que les valeurs propres complexes de $M$ sont de module 1.
+
+<details>
+  <summary><b>Indications</b></summary>
+  <details>
+    <summary><u>Indication solution 1</u></summary>
+        Considérer $M+M^{-1}$.
+    </details>
+    <details>
+    <summary><u>Indication solution 2</u></summary>
+        Considérer $X^T\overline{X}$ où $X$ est un vecteur propre complexe associé à une valeur propre complexe de $M$ et $\overline{X}$ désigne le vecteur dont les coefficients sont les conjugués complexes des coefficients de $X$.
+    </details>
+</details>
+
+<details>
+  <summary><b>Solution 1</b></summary>
+    On remarque que $M+M^{-1}$ est symétrique car $(M+M^{-1})^T=M^T+(M^T)^{-1}=M^{-1}+M$.<br>
+    Soit $\lambda\in\mathbb{C}$ une valeur propre de $M$ et $X$ un vecteur propre (complexe) associé. On a
+
+    $$(M+M^{-1})X=\lambda X+M^{-1}X=\lambda X+\frac{1}{\lambda}X=\left(\lambda+\frac{1}{\lambda}\right)X.$$
+
+    Donc $\displaystyle\lambda+\frac{1}{\lambda}$ est une valeur propre de $M+M^{-1}\in\mathcal{S}_n(\mathbb{R})$ et est donc réelle d'après le théorème spectral.<br>
+    Une étude simple des nombres complexes montre que $\lambda+\lambda^{-1}$ est réel si et seulement si $\vert\lambda\vert=1$ ou $\lambda\in\mathbb{R}$.<br><br>
+
+    Il reste a montrer que si $\lambda$ est une valeur propre réelle de $M$, alors $\lambda=\pm 1$.<br>
+    Si $\lambda\in\mathbb{R}$ est une valeur propre réelle de $M$, alors il existe $X$ un vecteur propre réel associé. On a
+
+    $$\Vert MX\Vert^2=\Vert\lambda X\Vert^2=\lambda^2\Vert X\Vert^2.$$
+
+    Or, $M$ est orthogonale donc préserve les normes, i.e.
+
+    $$\Vert MX\Vert^2=\Vert X\Vert^2.$$
+
+    Donc $\Vert X\Vert^2=\lambda^2\Vert X\Vert^2$, i.e. $\lambda^2=1$, ce qui donne $\lambda=\pm 1$.
+</details>
+
+<details>
+  <summary><b>Solution 2</b></summary>
+    Soit $\lambda\in\mathbb{C}$ une valeur propre de $M$ et $X$ un vecteur propre (complexe) associé. Montrons que $\lambda\overline{\lambda}=\vert\lambda\vert^2=1$.<br>
+    En utilisant le fait que $MX=\lambda X$, $M^TM=I_n$ et que $\overline{MX}=M\overline{X}$, on a :
+    $$X^T\overline{X}=X^T(M^TM)\overline{X}=(MX)^T\overline{MX}=(\lambda X)^T(\overline{\lambda X})=\vert\lambda\vert^2X^T\overline{X}.$$
+
+    En écrivant $X=\begin{pmatrix}x_1\\\vdots\\x_n\end{pmatrix}$, on a $\displaystyle X^T\overline{X}=\sum_{i=1}^n\vert x_i\vert^2$ qui est non nul car $X$ est un vecteur propre donc non nul.<br><br>
+    Ainsi, $X^T\overline{X}=\vert\lambda\vert^2X^T\overline{X}$ et $X^T\overline{X}\neq 0$ entraînent que $\vert\lambda\vert^2=1$, i.e. $\lambda$ est de module 1.
+</details>
 
 ---
 
@@ -15,12 +66,12 @@ Soit $A\in\mathcal{S}_n(\mathbb{R})$. Montrer que
 $$\operatorname{Tr}(A)^2\leq \operatorname{rg}(A)\sum_{1\leq i,j\leq n}a_{ij}^2.$$
 
 <details>
-  <summary><strong>Indications</strong></summary>
+  <summary><b>Indications</b></summary>
     Remarquer que $(A\mid B)=\operatorname{Tr}(A^TB)$ est le produit scalaire canonique de $\mathcal{M}_n(\mathbb{R})$.
 </details>
 
 <details>
-  <summary><strong>Solution 1</strong></summary>
+  <summary><b>Solution 1</b></summary>
     [Sans utiliser les valeurs propres]<br><br>
 
     On remarque que $\displaystyle\sum_{1\leq i,j\leq n}a_{ij}^2=\operatorname{Tr}(A^TA)=\operatorname{Tr}(A^2)$ car $A^T=A$.<br>
@@ -37,7 +88,7 @@ $$\operatorname{Tr}(A)^2\leq \operatorname{rg}(A)\sum_{1\leq i,j\leq n}a_{ij}^2.
 </details>
 
 <details>
-  <summary><strong>Solution 2</strong></summary>
+  <summary><b>Solution 2</b></summary>
     [En utilisant les valeurs propres]<br><br>
 
     On remarque que $\displaystyle\sum_{1\leq i,j\leq n}a_{ij}^2=\operatorname{Tr}(A^TA)=\operatorname{Tr}(A^2)$ car $A^T=A$.<br>
