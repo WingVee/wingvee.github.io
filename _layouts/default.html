@@ -28,10 +28,15 @@
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
       <a href="{{ site.baseurl }}/" class="btn">Menu</a>
       <a href="{{ site.baseurl }}/algebre-lineaire" class="btn">Algèbre linéaire</a>
+      <a href="{{ site.baseurl }}/theorie-des-probabilites" class="btn">Théorie des probabilités</a>
       <br>
       {% if page.url contains "/algebre-lineaire" %}
         <a href="{{ site.baseurl }}/matrices" class="btn">Matrices</a>
         <a href="{{ site.baseurl }}/endomorphismes-d'un-espace-euclidien" class="btn">Endomorphismes d'un espace euclidien</a>
+      {% endif %}
+      {% if page.url contains "/theorie-des-probabilites" %}
+        <a href="{{ site.baseurl }}/probabilites" class="btn">Probabilités</a>
+        <a href="{{ site.baseurl }}/variables-aleatoires" class="btn">Variables aléatoires</a>
       {% endif %}
     </header>
 
