@@ -104,3 +104,28 @@ $$\operatorname{Tr}(A)^2\leq \operatorname{rg}(A)\sum_{1\leq i,j\leq n}a_{ij}^2.
 </details>
 
 ---
+
+<h3 id="cns-commutation-transposée">Condition (nécessaire et) suffisante pour que $A$ et $A^T$ commutent</h3>
+
+Soit $A\in\mathcal{M}_n(\mathbb{R})$ telle que
+
+$$\operatorname{Sp}(A^TA - AA^T)\subset\mathbb{R}_+.$$
+
+Montrer que $A$ et $A^T$ commutent.
+
+<details>
+  <summary><b>Indications</b></summary>
+    Considérer $S=A^TA - AA^T$ et $\operatorname{Tr}(S)$.
+</details>
+
+<details>
+  <summary><b>Solution</b></summary>
+    Posons $S=A^TA - AA^T$.<br>
+    En remarquant que $S$ est symétrique réelle et est donc diagonalisable, il suffit de montrer que toutes les valeurs propres de $S$ sont nulles.<br>
+    On a $\operatorname{Tr}(S) = \operatorname{Tr}(A^TA - AA^T) = \operatorname{Tr}(A^TA) - \operatorname{Tr}(AA^T) = 0$, donc la somme des valeurs propres de $S$ est nulle.<br>
+    Or, les valeurs propres de $S$ sont positives par hypothèse, et ici de somme nulle, donc elles sont toutes nulles.<br>
+    Puisque $S$ est diagonalisable de seule valeur propre 0, on a alors $S=0$, i.e. $A^TA = AA^T$.<br>
+    Ainsi, $A$ et $A^T$ commutent.
+</details>
+
+---
