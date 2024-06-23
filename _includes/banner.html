@@ -1,0 +1,84 @@
+<a id="skip-to-content" href="#content">Skip to the content.</a>
+
+<header class="page-header" role="banner">
+  <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+  <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+  <a href="{{ site.baseurl }}/" class="btn">Menu</a>
+  <a href="{{ site.baseurl }}/fondamentaux" class="btn">Fondamentaux</a>
+  <a href="{{ site.baseurl }}/analyse" class="btn">Analyse</a>
+  <a href="{{ site.baseurl }}/algebre-lineaire" class="btn">Algèbre linéaire</a>
+  <a href="{{ site.baseurl }}/algebre-generale" class="btn">Algèbre générale</a>
+  <a href="{{ site.baseurl }}/theorie-des-probabilites" class="btn">Théorie des probabilités</a>
+  <a href="{{ site.baseurl }}/oraux" class="btn">Oraux</a>
+  <br>
+
+  {% if page.url == "/fondamentaux" or
+        page.url == "/raisonnement-et-vocabulaire-ensembliste" or
+        page.url == "/calculs-algebriques-et-trigonometrie" or
+        page.url == "/nombres-complexes" or
+        page.url == "/fonctions-usuelles" or
+        page.url == "/denombrement" or
+        page.url == "/denombrabilite"
+        %}
+    <a href="{{ site.baseurl }}/raisonnement-et-vocabulaire-ensembliste" class="btn">Raisonnement et vocabulaire ensembliste</a>
+    <a href="{{ site.baseurl }}/calculs-algebriques-et-trigonometrie" class="btn">Calculs algébriques et trigonométrie</a>
+    <a href="{{ site.baseurl }}/nombres-complexes" class="btn">Nombres complexes</a>
+    <a href="{{ site.baseurl }}/fonctions-usuelles" class="btn">Fonctions usuelles</a>
+    <a href="{{ site.baseurl }}/denombrement" class="btn">Dénombrement</a>
+    <a href="{{ site.baseurl }}/denombrabilite" class="btn">Dénombrabilité</a>
+  {% endif %}
+
+  {% if page.url == "/analyse" or
+        page.url == "/analyse-calculs-et-fondements" or
+        page.url == "/analyse-series-et-fonctions" or
+        page.url == "/analyse-a-plusieurs-variables" or
+        page.url == "/analyse-topologie-et-espaces-normes"
+        %}
+    <a href="{{ site.baseurl }}/analyse-calculs-et-fondements" class="btn">Analyse (calculs et fondements)</a>
+    <a href="{{ site.baseurl }}/analyse-series-et-fonctions" class="btn">Séries et fonctions</a>
+    <a href="{{ site.baseurl }}/analyse-a-plusieurs-variables" class="btn">Analyse à plusieurs variables</a>
+    <a href="{{ site.baseurl }}/analyse-topologie-et-espaces-normes" class="btn">Topologie et espaces normés</a>
+  {% endif %}
+
+  {% if page.url == "/algebre-lineaire" or
+        page.url == "/espaces-vectoriels" or
+        page.url == "/espaces-vectoriels-de-dimension-finie" or
+        page.url == "/applications-lineaires" or
+        page.url == "/matrices" or
+        page.url == "/determinants" or
+        page.url == "/reduction-des-endomorphismes" or
+        page.url == "/espaces-prehilbertiens-et-euclidiens" or
+        page.url == "/endomorphismes-d'un-espace-euclidien"
+        %}
+    <a href="{{ site.baseurl }}/espaces-vectoriels" class="btn">Espaces vectoriels</a>
+    <a href="{{ site.baseurl }}/espaces-vectoriels-de-dimension-finie" class="btn">Espaces vectoriels de dimension finie</a>
+    <a href="{{ site.baseurl }}/applications-lineaires" class="btn">Applications linéaires</a>
+    <a href="{{ site.baseurl }}/matrices" class="btn">Matrices</a>
+    <a href="{{ site.baseurl }}/determinants" class="btn">Déterminants</a>
+    <a href="{{ site.baseurl }}/reduction-des-endomorphismes" class="btn">Réduction des endomorphismes</a>
+    <a href="{{ site.baseurl }}/espaces-prehilbertiens-et-euclidiens" class="btn">Espaces préhilbertiens et euclidiens</a>
+    <a href="{{ site.baseurl }}/endomorphismes-d'un-espace-euclidien" class="btn">Endomorphismes d'un espace euclidien</a>
+  {% endif %}
+
+  {% if page.url == "/algebre-generale" or
+        page.url == "/groupes" or
+        page.url == "/anneaux-et-corps" or
+        page.url == "/arithmetique-des-entiers" or
+        page.url == "/arithmetique-des-polynomes" or
+        page.url == "/fractions-rationnelles"
+        %}
+    <a href="{{ site.baseurl }}/groupes" class="btn">Groupes</a>
+    <a href="{{ site.baseurl }}/anneaux-et-corps" class="btn">Anneaux et corps</a>
+    <a href="{{ site.baseurl }}/arithmetique-des-entiers" class="btn">Arithmétique des entiers</a>
+    <a href="{{ site.baseurl }}/arithmetique-des-polynomes" class="btn">Arithmétique des polynômes</a>
+    <a href="{{ site.baseurl }}/fractions-rationnelles" class="btn">Fractions rationnelles</a>
+  {% endif %}
+
+  {% if page.url == "/theorie-des-probabilites" or
+        page.url == "/probabilites" or
+        page.url == "/variables-aleatoires"
+        %}
+    <a href="{{ site.baseurl }}/probabilites" class="btn">Probabilités</a>
+    <a href="{{ site.baseurl }}/variables-aleatoires" class="btn">Variables aléatoires</a>
+  {% endif %}
+</header>

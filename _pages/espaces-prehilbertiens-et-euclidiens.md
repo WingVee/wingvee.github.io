@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Espaces préhilbertiens réels
-permalink: espaces-prehilbertiens
+title: Espaces préhilbertiens et euclidiens
+permalink: espaces-prehilbertiens-et-euclidiens
 redirect_from:
   - espaces-préhilbertiens
-  - espaces-prehilbertiens-reels
-  - espaces-préhilbertiens-réels
+  - espaces-prehilbertiens
+  - espaces-euclidiens
 ---
 
 ---
