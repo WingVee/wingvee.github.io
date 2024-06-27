@@ -28,16 +28,85 @@
     <a href="{{ site.baseurl }}/denombrabilite" class="btn">Dénombrabilité</a>
   {% endif %}
 
-  {% if page.url == "/analyse" or
-        page.url == "/analyse-calculs-et-fondements" or
-        page.url == "/analyse-series-et-fonctions" or
-        page.url == "/analyse-a-plusieurs-variables" or
-        page.url == "/analyse-topologie-et-espaces-normes"
+  {% if page.url == "/analyse" %}
+    <a href="{{ site.baseurl }}/analyse-calculs-et-fondements" class="btn">Analyse (calculs et fondements)</a>
+    <a href="{{ site.baseurl }}/analyse-series-et-fonctions" class="btn">Séries et fonctions</a>
+    <a href="{{ site.baseurl }}/analyse-a-plusieurs-variables" class="btn">Analyse à plusieurs variables</a>
+    <a href="{{ site.baseurl }}/analyse-topologie-et-espaces-normes" class="btn">Topologie et espaces normés</a>
+  {% endif %}
+
+  {% if page.url == "/analyse-calculs-et-fondements" or
+        page.url == "/suites-numeriques" or
+        page.url == "/limites-et-continuite" or
+        page.url == "/derivabilite" or
+        page.url == "/fonctions-convexes" or
+        page.url == "/calculs-asymptotiques" or
+        page.url == "/integration-sur-un-segment"
         %}
     <a href="{{ site.baseurl }}/analyse-calculs-et-fondements" class="btn">Analyse (calculs et fondements)</a>
     <a href="{{ site.baseurl }}/analyse-series-et-fonctions" class="btn">Séries et fonctions</a>
     <a href="{{ site.baseurl }}/analyse-a-plusieurs-variables" class="btn">Analyse à plusieurs variables</a>
     <a href="{{ site.baseurl }}/analyse-topologie-et-espaces-normes" class="btn">Topologie et espaces normés</a>
+    <br>
+    <a href="{{ site.baseurl }}/suites-numeriques" class="btn">Suites numériques</a>
+    <a href="{{ site.baseurl }}/limites-et-continuite" class="btn">Limites et continuité</a>
+    <a href="{{ site.baseurl }}/derivabilite" class="btn">Dérivabilité</a>
+    <a href="{{ site.baseurl }}/fonctions-convexes" class="btn">Fonctions convexes</a>
+    <a href="{{ site.baseurl }}/calculs-asymptotiques" class="btn">Calculs asymptotiques</a>
+    <a href="{{ site.baseurl }}/integration-sur-un-segment" class="btn">Intégration sur un segment</a>
+  {% endif %}
+
+  {% if page.url == "/analyse-series-et-fonctions" or
+        page.url == "/series-numeriques" or
+        page.url == "/familles-sommables" or
+        page.url == "/suites-et-series-de-fonctions" or
+        page.url == "/series-entieres"
+        %}
+    <a href="{{ site.baseurl }}/analyse-calculs-et-fondements" class="btn">Analyse (calculs et fondements)</a>
+    <a href="{{ site.baseurl }}/analyse-series-et-fonctions" class="btn">Séries et fonctions</a>
+    <a href="{{ site.baseurl }}/analyse-a-plusieurs-variables" class="btn">Analyse à plusieurs variables</a>
+    <a href="{{ site.baseurl }}/analyse-topologie-et-espaces-normes" class="btn">Topologie et espaces normés</a>
+    <br>
+    <a href="{{ site.baseurl }}/series-numeriques" class="btn">Séries numériques</a>
+    <a href="{{ site.baseurl }}/familles-sommables" class="btn">Familles sommables</a>
+    <a href="{{ site.baseurl }}/suites-et-series-de-fonctions" class="btn">Suites et séries de fonctions</a>
+    <a href="{{ site.baseurl }}/series-entieres" class="btn">Séries entières</a>
+  {% endif %}
+
+  {% if page.url == "/analyse-a-plusieurs-variables" or
+        page.url == "/integrales-impropres" or
+        page.url == "/integrales-a-parametres" or
+        page.url == "/fonctions-de-deux-variables" or
+        page.url == "/equations-differentielles" or
+        page.url == "/calcul-differentiel"
+        %}
+    <a href="{{ site.baseurl }}/analyse-calculs-et-fondements" class="btn">Analyse (calculs et fondements)</a>
+    <a href="{{ site.baseurl }}/analyse-series-et-fonctions" class="btn">Séries et fonctions</a>
+    <a href="{{ site.baseurl }}/analyse-a-plusieurs-variables" class="btn">Analyse à plusieurs variables</a>
+    <a href="{{ site.baseurl }}/analyse-topologie-et-espaces-normes" class="btn">Topologie et espaces normés</a>
+    <br>
+    <a href="{{ site.baseurl }}/integrales-impropres" class="btn">Intégrales impropres</a>
+    <a href="{{ site.baseurl }}/integrales-a-parametres" class="btn">Intégrales à paramètres</a>
+    <a href="{{ site.baseurl }}/fonctions-de-deux-variables" class="btn">Fonctions de deux variables</a>
+    <a href="{{ site.baseurl }}/equations-differentielles" class="btn">Équations différentielles</a>
+    <a href="{{ site.baseurl }}/calcul-differentiel" class="btn">Calcul différentiel</a>
+  {% endif %}
+
+  {% if page.url == "/analyse-topologie-et-espaces-normes" or
+        page.url == "/espaces-vectoriels-normes" or
+        page.url == "/suites-et-fonctions-vectorielles" or
+        page.url == "/topologie-dans-r" or
+        page.url == "/topologie-dans-les-espaces-vectoriels-normes"
+        %}
+    <a href="{{ site.baseurl }}/analyse-calculs-et-fondements" class="btn">Analyse (calculs et fondements)</a>
+    <a href="{{ site.baseurl }}/analyse-series-et-fonctions" class="btn">Séries et fonctions</a>
+    <a href="{{ site.baseurl }}/analyse-a-plusieurs-variables" class="btn">Analyse à plusieurs variables</a>
+    <a href="{{ site.baseurl }}/analyse-topologie-et-espaces-normes" class="btn">Topologie et espaces normés</a>
+    <br>
+    <a href="{{ site.baseurl }}/espaces-vectoriels-normes" class="btn">Espaces vectoriels normés</a>
+    <a href="{{ site.baseurl }}/suites-et-fonctions-vectorielles" class="btn">Suites et fonctions vectorielles</a>
+    <a href="{{ site.baseurl }}/topologie-dans-r" class="btn">Topologie dans R</a>
+    <a href="{{ site.baseurl }}/topologie-dans-les-espaces-vectoriels-normes" class="btn">Topologie dans les espaces normés</a>
   {% endif %}
 
   {% if page.url == "/algebre-lineaire" or
