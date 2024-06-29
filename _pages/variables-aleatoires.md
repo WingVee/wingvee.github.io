@@ -67,21 +67,22 @@ $$\forall n\in\mathbb{N}^*,\ \forall k\in\mathbb{N},\ \mathbb{P}(Y=k|X=n)=\frac{
     </details>
   </li>
   <li>
-    Calculer $\mathbb P(Y=0)$ et montrer que, pour tout $k\in\mathbb N^*$,
-    $$\mathbb P(Y=k)=\frac{p}{(1-p)k!}\,f_k\left(\frac{1-p}{e}\right),$$
-    où l'on note $\displaystyle f_k : x \mapsto \sum_{n=1}^{+\infty} n^kx^n$. On pourra admettre que $f_k$ est bien définie sur $]-1,1[$ (on peut également le démontrer, ce qui est fait dans la 1ère partie du même sujet Centrale à la question 4).
+    Montrer que, pour tout $k\in\mathbb N$,
+    $$\mathbb P(Y=k)=\frac{p}{(1-p)k!}\,f_k\left(\frac{1-p}{e}\right) \qquad \text{où} \quad f_k : x \mapsto \sum_{n=1}^{+\infty} n^kx^n.$$
+    On pourra admettre (la question 4 du sujet Centrale) que $f_k$ est bien définie sur $]-1,1[$.<br>
+    Calculer $\mathbb P(Y=0)$.
     <details>
       <summary><b>Solution</b></summary>
         D'après la formule des probabilités totales appliquée au système complet d'événements $(X=n)_{n\in\mathbb N^*}$, et d'après la question précédente, on a pour tout $k\in\mathbb N$ :
-        $$\mathbb P(Y=k)=\sum_{n=1}^{+\infty} \mathbb P(X=n,Y=k)=\sum_{n=1}^{+\infty} \frac{n^k}{k!}e^{-n}p(1-p)^{n-1}.$$
-        Pour $k=0$, on a, en sachant que $\displaystyle 0<\frac{1-p}{e}<1$ :
-        $$\mathbb P(Y=0)=\sum_{n=1}^{+\infty} e^{-n}p(1-p)^{n-1}=\frac{p}{e}\sum_{n=1}^{+\infty} \left(\frac{1-p}{e}\right)^{n-1}=\frac{p}{e}\frac{1}{1-\frac{1-p}{e}}=\frac{p}{e+p-1}.$$
-        Pour $k\in\mathbb N^*$, on a :
         $$\begin{align*}
-        \mathbb P(Y=k)&=\sum_{n=1}^{+\infty} \frac{n^k}{k!}e^{-n}p(1-p)^{n-1}\\
+        P(Y=k)&=\sum_{n=1}^{+\infty} \mathbb P(X=n,Y=k)\\
+        &=\sum_{n=1}^{+\infty}
+        \frac{n^k}{k!}e^{-n}p(1-p)^{n-1}\\
         &=\frac{p}{(1-p)k!}\sum_{n=1}^{+\infty} n^k\left(\frac{1-p}{e}\right)^n\\
         &=\frac{p}{(1-p)k!}\,f_k\left(\frac{1-p}{e}\right).
         \end{align*}$$
+        Pour $k=0$, on a, en sachant que $\displaystyle 0<\frac{1-p}{e}<1$ et que $0!=1$ :
+        $$\mathbb P(Y=0)=\frac{p}{1-p}\sum_{n=1}^{+\infty} \left(\frac{1-p}{e}\right)^n=\frac{p}{1-p}\frac{\frac{1-p}{e}}{1-\frac{1-p}{e}}=\frac{p}{e-(1-p)}.$$
     </details>
   </li>
   <li>
@@ -90,17 +91,14 @@ $$\forall n\in\mathbb{N}^*,\ \forall k\in\mathbb{N},\ \mathbb{P}(Y=k|X=n)=\frac{
       <summary><b>Solution</b></summary>
         On a :
         $$\begin{align*}
-        \sum_{k=0}^{+\infty} \mathbb P(Y=k)&=\mathbb P(Y=0)+\sum_{k=1}^{+\infty} \mathbb P(Y=k)\\
-        &=\frac{p}{e+p-1}+\sum_{k=1}^{+\infty} \frac{p}{(1-p)k!}\,f_k\left(\frac{1-p}{e}\right)\\
-        &=\frac{p}{e+p-1}+\sum_{k=1}^{+\infty} \frac{p}{(1-p)k!}\sum_{n=1}^{+\infty} n^k\left(\frac{1-p}{e}\right)^n\\
-        &=\frac{p}{e+p-1}+\frac{p}{(1-p)} \sum_{k=1}^{+\infty} \sum_{n=1}^{+\infty} \frac{n^k}{k!}\left(\frac{1-p}{e}\right)^n\\
-        &=\frac{p}{e+p-1}+\frac{p}{(1-p)} \sum_{n=1}^{+\infty} \sum_{k=1}^{+\infty} \frac{n^k}{k!}\left(\frac{1-p}{e}\right)^n \qquad \text{(sommes à termes positifs)}\\
-        &=\frac{p}{e+p-1}+\frac{p}{(1-p)} \sum_{n=1}^{+\infty} \left(\frac{1-p}{e}\right)^n \sum_{k=1}^{+\infty} \frac{n^k}{k!}\\
-        &=\frac{p}{e+p-1}+\frac{p}{(1-p)} \sum_{n=1}^{+\infty} \left(\frac{1-p}{e}\right)^n (e^n-1)\\
-        &=\frac{p}{e+p-1}+\frac{p}{(1-p)}\left(\sum_{n=1}^{+\infty} \left(1-p\right)^n - \sum_{n=1}^{+\infty} \left(\frac{1-p}{e}\right)^n\right)\\
-        &=\frac{p}{e+p-1}+\frac{p}{(1-p)}\left(\frac{1-p}{1-(1-p)}-\frac{\frac{1-p}{e}}{1-\frac{1-p}{e}}\right)\\
-        &=\frac{p}{e+p-1}+\frac{p}{(1-p)}\frac{1-p}{p}-\frac{p}{(1-p)}\frac{1-p}{e+p-1}\\
-        &=\frac{p}{e+p-1}+1-\frac{p}{e+p-1}\\
+        \sum_{k=0}^{+\infty} \mathbb P(Y=k) &= \sum_{k=0}^{+\infty} \frac{p}{(1-p)k!}\,f_k\left(\frac{1-p}{e}\right)\\
+        &=\sum_{k=0}^{+\infty} \frac{p}{(1-p)k!}\sum_{n=1}^{+\infty} n^k\left(\frac{1-p}{e}\right)^n\\
+        &=\frac{p}{(1-p)} \sum_{k=0}^{+\infty} \sum_{n=1}^{+\infty} \frac{n^k}{k!}\left(\frac{1-p}{e}\right)^n\\
+        &=\frac{p}{(1-p)} \sum_{n=1}^{+\infty} \sum_{k=0}^{+\infty} \frac{n^k}{k!}\left(\frac{1-p}{e}\right)^n \qquad \text{(sommes à termes positifs)}\\
+        &=\frac{p}{(1-p)} \sum_{n=1}^{+\infty} \left(\frac{1-p}{e}\right)^n \sum_{k=0}^{+\infty} \frac{n^k}{k!}\\
+        &=\frac{p}{(1-p)} \sum_{n=1}^{+\infty} \left(\frac{1-p}{e}\right)^n e^n\\
+        &=\frac{p}{(1-p)} \sum_{n=1}^{+\infty} (1-p)^n\\
+        &=\frac{p}{(1-p)} \frac{1-p}{1-(1-p)}\\
         &=1.
         \end{align*}$$
     </details>
@@ -135,7 +133,8 @@ $$\forall n\in\mathbb{N}^*,\ \forall k\in\mathbb{N},\ \mathbb{P}(Y=k|X=n)=\frac{
         $$\begin{align*}
         \sum_{k=0}^{+\infty} k^2\,\mathbb P(Y=k)&=\sum_{k=1}^{+\infty} k^2\frac{p}{(1-p)k!}\,f_k\left(\frac{1-p}{e}\right)\\
         &=\frac{p}{1-p}\sum_{k=1}^{+\infty} \frac{k}{(k-1)!}\,\sum_{n=1}^{+\infty} n^k\left(\frac{1-p}{e}\right)^n\\
-        &=\frac{p}{1-p}\sum_{n=1}^{+\infty} \left(\frac{1-p}{e}\right)^n\sum_{k=0}^{+\infty} \frac{k+1}{k!}\,n^{k+1} \qquad \text{(sommes à termes positifs)}\\
+        &=\frac{p}{1-p}\sum_{n=1}^{+\infty} \left(\frac{1-p}{e}\right)^n\sum_{k=1}^{+\infty} \frac{k}{(k-1)!}\,n^k \qquad \text{(sommes à termes positifs)}\\
+        &=\frac{p}{1-p}\sum_{n=1}^{+\infty} \left(\frac{1-p}{e}\right)^n\sum_{k=0}^{+\infty} \frac{k+1}{k!}\,n^{k+1}\\
         &=\frac{p}{1-p}\sum_{n=1}^{+\infty} \left(\frac{1-p}{e}\right)^n \left(\sum_{k=1}^{+\infty} \frac{1}{(k-1)!}\,n^{k+1} + \sum_{k=0}^{+\infty} \frac{1}{k!}\,n^{k+1}\right)\\
         &=\frac{p}{1-p}\sum_{n=1}^{+\infty} \left(\frac{1-p}{e}\right)^n \left(n^2e^n + ne^n\right)\\
         &=\frac{p}{1-p}\left(f_2(1-p)+f_1(1-p)\right) \qquad \text{(où $1-p\in\,]-1,1[$)}\\
