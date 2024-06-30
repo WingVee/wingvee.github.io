@@ -8,7 +8,10 @@ redirect_from:
 
 ---
 
-<h1 id="formulaire">Formulaire</h1>
+<h1 id="formulaire">
+  <a href="#formulaire" class="header">
+  Formulaire</a>
+</h1>
 
 | Formule | Description |
 |:-------:|:-----------:|

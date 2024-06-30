@@ -10,7 +10,10 @@ redirect_from:
 
 ---
 
-<h3 id="formule-de-legendre">Formule de Legendre (1830)</h3>
+<h3 id="formule-de-legendre">
+  <a href="#formule-de-legendre" class="header">
+  Formule de Legendre (1830)</a>
+</h3>
 
 Soient $n\in\mathbb{N}^*$ et $p$ un nombre premier.<br>
 On note $v_p(n)$ la valuation $p$-adique de $n$, c'est-à-dire l'exposant de $p$ dans la décomposition en facteurs premiers de $n$ (de manière équivalente, le plus grand entier $k$ tel que $p^k$ divise $n$).<br>

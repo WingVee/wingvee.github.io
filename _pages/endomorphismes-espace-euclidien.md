@@ -9,7 +9,10 @@ redirect_from:
 
 ---
 
-<h3 id="valeurs-propres-complexes-matrices-orthogonales">Valeurs propres complexes des matrices orthogonales</h3>
+<h3 id="valeurs-propres-complexes-matrices-orthogonales">
+  <a href="#valeurs-propres-complexes-matrices-orthogonales" class="header">
+  Valeurs propres complexes des matrices orthogonales</a>
+</h3>
 
 Soit $M\in\mathcal{O}_n(\mathbb{R})$. Montrer que les valeurs propres complexes de $M$ sont de module 1.
 
@@ -59,7 +62,10 @@ Soit $M\in\mathcal{O}_n(\mathbb{R})$. Montrer que les valeurs propres complexes 
 
 ---
 
-<h3 id="inégalité-trace-rang">Une inégalité avec la trace et le rang</h3>
+<h3 id="inegalite-trace-rang">
+  <a href="#inegalite-trace-rang" class="header">
+  Une inégalité avec la trace et le rang</a>
+</h3>
 
 Soit $A\in\mathcal{S}_n(\mathbb{R})$. Montrer que
 
@@ -105,7 +111,10 @@ $$\operatorname{Tr}(A)^2\leq \operatorname{rg}(A)\sum_{1\leq i,j\leq n}a_{ij}^2.
 
 ---
 
-<h3 id="cns-commutation-transposée">Condition (nécessaire et) suffisante pour que $A$ et $A^T$ commutent</h3>
+<h3 id="cns-commutation-transposee">
+  <a href="#cns-commutation-transposee" class="header">
+  Condition (nécessaire et) suffisante pour que $A$ et $A^T$ commutent</a>
+</h3>
 
 Soit $A\in\mathcal{M}_n(\mathbb{R})$ telle que
 

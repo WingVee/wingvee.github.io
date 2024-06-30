@@ -8,7 +8,10 @@ redirect_from:
 
 ---
 
-<h3 id="mon-oral-ens-ulsr">Mon oral ENS Ulm/Lyon/Paris-Saclay/Rennes</h3>
+<h3 id="mon-oral-ens-ulsr">
+  <a href="#mon-oral-ens-ulsr" class="header">
+  Mon oral ENS Ulm/Lyon/Paris-Saclay/Rennes</a>
+</h3>
 
 Soit $f:\mathbb N\to\mathbb R$.<br>
 On définit les applications $P$ et $D$ définies de $\mathcal F(\mathbb N,\mathbb R)$ dans $\mathcal F(\mathbb N,\mathbb R)$ par :
@@ -68,7 +71,6 @@ $$P^n(f^2)(x)-(P^n(f)(x))^2\leq\frac{n}{4}P^{n-1}((D(f))^2)(x).$$
           <summary>Hérédité</summary>
             Supposons que pour un certain $n\in\mathbb N^*$, on ait :
             $$P^n(f^2)(x)-(P^n(f)(x))^2\leq\frac{n}{4}P^{n-1}((D(f))^2)(x).$$
-
             On a alors :
             $$\begin{align*}
             P^{n+1}&(f^2)(x)-(P^{n+1}(f)(x))^2=P\left(P^n(f^2)\right)(x)-\left(P\left(P^n(f)\right)(x)\right)^2\\
@@ -117,7 +119,6 @@ $$P^n(f^2)(x)-(P^n(f)(x))^2\leq\frac{n}{4}P^{n-1}((D(f))^2)(x).$$
               <summary>Hérédité</summary>
                 Supposons que pour un certain $n\in\mathbb N^*$, on ait :
                 $$\left(D(P^n(f))\right)^2(x)\leq P^n((D(f))^2)(x).$$
-
                 On a alors :
                 $$\begin{align*}
                 &\left(D(P^{n+1}(f))\right)^2(x)=\left(P^{n+1}(f)(x+1)-P^{n+1}(f)(x)\right)^2\\
@@ -135,7 +136,6 @@ $$P^n(f^2)(x)-(P^n(f)(x))^2\leq\frac{n}{4}P^{n-1}((D(f))^2)(x).$$
             $$\forall x\in\mathbb N,\ \forall n\in\mathbb N^*,\ \forall f\in\mathcal F(\mathbb N,\mathbb R),\ P^n(f^2)(x)-(P^n(f)(x))^2\leq\frac{n}{4}P^{n-1}((D(f))^2)(x).$$
         </details>
     </details>
-
     <details>
       <summary><u>Solution 2 : avec les opérateurs</u></summary>
         En remarquant que $P$ et $D$ sont des opérateurs linéaires dans l'espace vectoriel des suites réelles, cela nous incite à raisonner avec les opérateurs. Cela simplifie grandement les calculs et la preuve est plus élégante, notamment car elle n'utilise pas la récurrence.
@@ -147,9 +147,7 @@ $$P^n(f^2)(x)-(P^n(f)(x))^2\leq\frac{n}{4}P^{n-1}((D(f))^2)(x).$$
             $(\mathcal F(E,E),\circ)$ est un monoïde où $\circ$ est la composition d'applications.<br>
             $(\mathcal F(E,E),\leq)$ est un ensemble ordonné où $\leq$ est défini par
             $$A\leq B\Longleftrightarrow\forall f\in E,\ A(f)\leq B(f)\Longleftrightarrow \forall f\in E,\ \forall x\in\mathbb N,\ A(f)(x)\leq B(f)(x).$$
-    
             On note $T,I,C\in\mathcal F(E,E)$ les opérateurs définis par :
-
             $$\begin{align*}
             T(f):\mathbb N &\to\mathbb R \\
             x &\mapsto f(x+1),\\
@@ -158,28 +156,23 @@ $$P^n(f^2)(x)-(P^n(f)(x))^2\leq\frac{n}{4}P^{n-1}((D(f))^2)(x).$$
             C(f):\mathbb N &\to\mathbb R \\
             x &\mapsto (f(x))^2.
             \end{align*}$$
-
             Ici, $T$ est l'opération de translation, $I$ est l'opération d'identité et $C$ est l'opération de mise au carré.<br>
             On a $\displaystyle P=\frac12(I+T)$ et $D=T-I$ (ce sont des opérateurs linéaires) et $C=I\times I$.<br>
         </details>
         <details>
           <summary>Réécriture de l'inégalité</summary>
             On note, pour $F\in\mathcal F(E,E)$ et $n\in\mathbb N^*$, $F^n$ l'application $F\circ\cdots\circ F$ ($n$ fois).<br>
-
             L'inégalité à démontrer
             $$\forall x\in\mathbb N,\ \forall n\in\mathbb N^*,\ \forall f\in\mathcal F(\mathbb N,\mathbb R),\ P^n(f^2)(x)-(P^n(f)(x))^2\leq\frac{n}{4}P^{n-1}((D(f))^2)(x)$$
             s'écrit donc
             $$P^n\circ C - C\circ P^n\leq\frac{n}{4}P^{n-1}\circ C\circ D.$$
-
             On peut simplifier davantage avec le commutateur défini dans $\mathcal F(E,E)$ par $[A,B]=A\circ B-B\circ A$ :
-
             $$[P^n,C]\leq\frac{n}{4}P^{n-1}\circ C\circ D.$$
         </details>
         <details>
           <summary>Démonstration</summary>
             Pour rendre les calculs plus clairs, l'exposant $n$ désignera le $n$-ième itéré de la composition (vu dans $(\mathcal F(E,E),\circ)$) et l'exposant $2$ désignera la mise au carré (dans l'anneau commutatif $(\mathcal F(E,E),+,\times)$).<br>
             Ainsi, ici, $C=I\times I=I^2$.<br><br>
-
             On utilise les résultats suivants, vrais pour $A,B\in\mathcal F(E,E)$ :
             <ol>
               <li>
@@ -223,7 +216,6 @@ $$P^n(f^2)(x)-(P^n(f)(x))^2\leq\frac{n}{4}P^{n-1}((D(f))^2)(x).$$
               &\leq \frac14\sum_{k=0}^{n-1}P^{n-1}\circ C\circ D \qquad \text{($*$) (c'est ce qu'on aimerait avoir)}\\
               &=\frac{n}{4}P^{n-1}\circ C\circ D.
               \end{align*}$$
-    
               Il reste à montrer ($*$) : pour tout $k\in\{0,\ldots,n-1\}$, on a $P^k\circ C\circ D \circ P^{n-1-k}\leq P^{n-1}\circ C\circ D$.<br>
               Il suffit de démontrer la chaîne d'inégalités suivante :
               $$C\circ D \circ P^{n-1}\leq P\circ C\circ D \circ P^{n-2-k} \leq \cdots \leq P^{n-1}\circ C\circ D,$$
@@ -246,20 +238,16 @@ $$P^n(f^2)(x)-(P^n(f)(x))^2\leq\frac{n}{4}P^{n-1}((D(f))^2)(x).$$
             &= \frac{1}{4} ((T-I) \circ D)^2\\
             &= \frac{1}{4} C \circ D \circ D.
             \end{align*}$$
-
             On a alors
             $$P^k \circ [P,C\circ D] \circ P^{n-2-k} = \frac{1}{4} P^k \circ C \circ D \circ D \circ P^{n-2-k}.$$
-
             D'après les résultats 4. et 5. on a $P^k\circ C\circ (D \circ D \circ P^{n-2-k})\geq 0$, donc $P^k \circ [P,C\circ D] \circ P^{n-2-k}\geq 0$.<br>
             D'où $(*)$ (étape 2) et donc l'inégalité voulue :
-
             $$[P^n,C]\leq\frac{n}{4}P^{n-1}\circ C\circ D.$$
           </details>
           <details>
             <summary>Étape 4 : Résumé et conclusion</summary>
             Avec les opérateurs précédemment définis, l'inégalité à démontrer est équivalente à :
             $$[P^n,C]\leq\frac{n}{4}P^{n-1}\circ C\circ D.$$
-
             On calcule alors :<br>
             <li>
               $[P,C]=\dfrac14C\circ D$.

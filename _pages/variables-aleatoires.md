@@ -8,7 +8,10 @@ redirect_from:
 
 ---
 
-<h3 id="truquer-deux-dés-loi-uniforme">Truquer deux dés à 6 faces pour obtenir une loi uniforme</h3>
+<h3 id="truquer-deux-des-loi-uniforme">
+  <a href="#truquer-deux-des-loi-uniforme" class="header">
+  Truquer deux dés à 6 faces pour obtenir une loi uniforme</a>
+</h3>
 
 Est-il possible de truquer deux dés (indépendants) à 6 faces de manière à ce que la variable aléatoire $X$ qui associe à chaque lancer la somme des deux dés suive la uniforme sur $\\{2,\ldots,12\\}$ ?
 
@@ -41,7 +44,10 @@ Est-il possible de truquer deux dés (indépendants) à 6 faces de manière à c
 
 ---
 
-<h3 id="centrale-pc-2023-III-A">Centrale PC 2023 Mathématiques 2 partie III.A</h3>
+<h3 id="centrale-pc-2023-III-A">
+  <a href="#centrale-pc-2023-III-A" class="header">
+  Centrale PC 2023 Mathématiques 2 partie III.A</a>
+</h3>
 
 Cet exercice est adapté de la partie **III.A** de l'épreuve de <a href="https://www.concours-centrale-supelec.fr/CentraleSupelec/2023/PC/M045.pdf" target="_blank">mathématiques 2 de Centrale PC 2023</a>.
 

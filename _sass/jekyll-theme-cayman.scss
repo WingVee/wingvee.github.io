@@ -402,3 +402,14 @@ a {
     width: 100%;
   }
 }
+
+summary {
+  cursor: pointer;
+}
+
+a.header {
+  color: $section-headings-color;
+  &:hover {
+    text-decoration: underline;
+  }
+}

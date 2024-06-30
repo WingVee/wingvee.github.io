@@ -10,7 +10,10 @@ redirect_from:
 
 ---
 
-<h3 id="caracterisation-projecteurs-orthogonaux">Caractérisation des projecteurs orthogonaux</h3>
+<h3 id="caracterisation-projecteurs-orthogonaux">
+  <a href="#caracterisation-projecteurs-orthogonaux" class="header">
+  Caractérisation des projecteurs orthogonaux</a>
+</h3>
 
 Soit $p$ un projecteur d'un espace préhilbertien réel $E$. Montrer que les assertions suivantes sont équivalentes :
 1. $p$ est un projecteur orthogonal.

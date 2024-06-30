@@ -8,7 +8,10 @@ redirect_from:
 
 ---
 
-<h3 id="sous-groupes-de-r">Sous-groupes additifs $\mathbb{R}$</h3>
+<h3 id="sous-groupes-de-r">
+  <a href="#sous-groupes-de-r" class="header">
+  Sous-groupes de $\mathbb{R}$</a>
+</h3>
 
 Soit $G$ un sous-groupe additif de $\mathbb{R}$. Montrer que 
 - soit $G$ est monogène, i.e. de la forme $G = a\mathbb{Z}$ pour un certain $a \in \mathbb{R}_+$,

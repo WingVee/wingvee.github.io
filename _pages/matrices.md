@@ -8,7 +8,10 @@ redirect_from:
 
 ---
 
-<h3 id="groupe-gln-divise-somme-trace">Le cardinal d'un sous-groupe fini de $GL_n(\mathbb{R})$ divise la somme des traces de ses éléments</h3>
+<h3 id="groupe-gln-divise-somme-trace">
+  <a href="#groupe-gln-divise-somme-trace" class="header">
+  Le cardinal d'un sous-groupe fini de $GL_n(\mathbb{R})$ divise la somme des traces de ses éléments</a>
+</h3>
 
 Soit $G$ un sous-groupe fini de $GL_n(\mathbb{R})$. Montrer que $\vert G\vert$ divise $\displaystyle\sum_{M\in G}\operatorname{Tr}(M)$.
 
@@ -54,11 +57,20 @@ Soit $G$ un sous-groupe fini de $GL_n(\mathbb{R})$. Montrer que $\vert G\vert$ d
 
 ---
 
-<h1 id="formulaire">Formulaire</h1>
+<h1 id="formulaire">
+  <a href="#formulaire" class="header">
+  Formulaire</a>
+</h1>
 
-<h2 id="matrices-a-connaître">Matrices à connaître</h2>
+<h2 id="matrices-a-connaitre">
+  <a href="#matrices-a-connaitre" class="header">
+  Matrices à connaître</a>
+</h2>
 
-<h3 id="J">Matrice de permutation $J$</h3>
+<h3 id="J">
+  <a href="#J" class="header">
+  Matrice de permutation $J$</a>
+</h3>
 
 **Définition**
 
