@@ -73,3 +73,53 @@ Soit $G$ un sous-groupe additif de $\mathbb{R}$. Montrer que
 </details>
 
 ---
+
+<h3 id="groupe-infini-infinites-sous-groupes">
+  <a href="#groupe-infini-infinites-sous-groupes" class="header">
+  Un groupe infini admet une infinité de sous-groupes</a>
+</h3>
+
+Montrer que tout groupe infini $G$ admet une infinité de sous-groupes.
+
+<details>
+  <summary><b>Indications</b></summary>
+    <details>
+      <summary><u>Indication 1</u></summary>
+        Supposer que $G$ admet un nombre fini de sous-groupes.<br>
+        Montrer qu'il existe une partie finie $A$ de $G$ telle que $\displaystyle G = \bigcup_{a\in A} \langle a\rangle$.
+    </details>
+    <details>
+      <summary><u>Indication 2</u></summary>
+        Montrer que tous les sous-groupes engendrés $\langle a\rangle$ sont finis.
+    </details>
+</details>
+
+<details>
+  <summary><b>Solution</b></summary>
+    Montrons la contraposée de l'énoncé : si $G$ admet un nombre fini de sous-groupes, alors $G$ est fini.<br>
+    Supposons que $G$ admet un nombre fini de sous-groupes.<br><br>
+    <li>
+      <u>Étape 1 :</u> Montrons qu'il existe une partie finie $A$ de $G$ telle que $\displaystyle G = \bigcup_{a\in A} \langle a\rangle$.<br>
+      <ol>
+        Remarquons tout d'abord que $a \in \langle a\rangle$ pour tout $a\in G$. Donc
+        $$G = \bigcup_{a\in G} \langle a\rangle.$$
+        Or, $G$ admet un nombre fini de sous-groupes, donc l'ensemble des sous-groupes engendrés $\left\{\langle a\rangle\mid a\in G\right\}$ est fini.<br>
+        Donc il existe une partie finie $A$ de $G$ telle que les deux ensembles suivants soient égaux :
+        $$\left\{\langle a\rangle\mid a\in G\right\} = \left\{\langle a\rangle\mid a\in A\right\}.$$
+        Ainsi,
+        $$G = \displaystyle\bigcup_{a\in A} \langle a\rangle.$$
+      </ol>
+    </li>
+    <li>
+      <u>Étape 2 :</u> Montrons que tous les sous-groupes engendrés $\langle a\rangle$ sont finis.<br>
+      <ol>
+        Soit $a\in G$. Si $\langle a\rangle$ est infini, alors $\langle a\rangle$ est isomorphe à $\mathbb{Z}$.<br>
+        Or $\mathbb{Z}$ admet une infinité de sous-groupes distincts (de la forme $n\mathbb{Z}$ pour $n\in\mathbb{N}$).<br>
+        Donc par isomorphisme, $\langle a\rangle$ admet une infinité de sous-groupes distincts et donc $G$ admet une infinité de sous-groupes, ce qui contredit l'hypothèse de départ.<br>
+        Donc tous les sous-groupes engendrés $\langle a\rangle$ sont finis.
+      </ol>
+    </li>
+    En combinant les deux étapes, on obtient que $\displaystyle G = \bigcup_{a\in A} \langle a\rangle$ est une union finie de sous-groupes finis, donc $G$ est fini, ce qui conclut la preuve par contraposée.
+</details>
+
+---
