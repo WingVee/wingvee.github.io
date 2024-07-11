@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Jeudi 11 juillet 2024**
+
+Ajout de l'exercice : [L'ensemble des parties muni de la différence symétrique est un groupe abélien](/groupes#parties-et-difference-symetrique).
+
 **Mercredi 10 juillet 2024**
 
 Ajout de l'exercice : [Inégalité de Jensen](/fonctions-convexes#inegalite-de-jensen).
