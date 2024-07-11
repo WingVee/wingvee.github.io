@@ -4,6 +4,14 @@ title: Historique
 permalink: historique
 ---
 
+**Mercredi 10 juillet 2024**
+
+Ajout de l'exercice : [Inégalité de Jensen](/fonctions-convexes#inegalite-de-jensen).
+
+**Mardi 9 juillet 2024**
+
+Ajout de l'exercice : [Semi-convergence de l'intégrale de Dirichlet](/integrales-impropres#integrale-de-dirichlet-semi-convergence).
+
 **Lundi 8 juillet 2024**
 
 Mise à jour de la page [historique](/historique).
