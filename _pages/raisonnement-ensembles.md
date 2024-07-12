@@ -26,7 +26,7 @@ Montrer les propriétés suivantes de la fonction indicatrice, avec $A,B\subsete
 2. Union : $\mathbb 1_{A\cup B} = \max(\mathbb 1_A,\mathbb 1_B) = \mathbb 1_A + \mathbb 1_B - \mathbb 1_A \cdot \mathbb 1_B$.<br> Union disjointe : si $A\cap B = \emptyset$, alors $\mathbb 1\_\{A\cup B\} = \mathbb 1\_A + \mathbb 1\_B$.
 3. Complémentaire : $\mathbb 1_{\overline{A}} = 1 - \mathbb 1_A$.
 4. Cardinal : $\operatorname{Card}(A)= \sum_{x\in E} \mathbb 1_A(x) \in \mathbb{N}\cup\\{+\infty\\}$.
-5. Différence symétrique : $\mathbb 1_{A\Delta B} = \|\mathbb 1_A - \mathbb 1_B\| = \max(\mathbb 1_A,\mathbb 1_B) - \min(\mathbb 1_A,\mathbb 1_B) = \mathbb 1_A + \mathbb 1_B - 2\mathbb 1_A \cdot \mathbb 1_B$.
+5. Différence symétrique : $\mathbb 1_{A\Delta B} = (\mathbb 1_A - \mathbb 1_B)^2 = \|\mathbb 1_A - \mathbb 1_B\| = \max(\mathbb 1_A,\mathbb 1_B) - \min(\mathbb 1_A,\mathbb 1_B) = \mathbb 1_A + \mathbb 1_B - 2\mathbb 1_A \cdot \mathbb 1_B$.
 6. Inclusion : $A\subseteq B \iff \mathbb 1_A \leq \mathbb 1_B$ (c'est-à-dire $\forall x\in E, \mathbb 1_A(x) \leq \mathbb 1_B(x)$).
 7. Bijection : L'application suivante est bijective :
 
@@ -117,8 +117,8 @@ A &\longmapsto &\mathbb 1_A
 				1 & 1 & 0 & 0\\
 				\hline
 				\end{array}$$
-				Donc $\mathbb 1_{A\Delta B} = |\mathbb 1_A - \mathbb 1_B|$.
-				<br>
+				Donc $\mathbb 1_{A\Delta B} = |\mathbb 1_A - \mathbb 1_B|$.<br>
+				Tout est à valeurs dans $\{0,1\}$ (qui est leur propre carré), donc $(\mathbb 1_A - \mathbb 1_B)^2 = |\mathbb 1_A - \mathbb 1_B|$.<br>
 				En exploitant le fait que $|a-b| = \max(a,b) - \min(a,b)$, et en utilisant les propriétés de l'union et de l'intersection démontrées précédemment, on a :
 				$$\mathbb 1_{A\Delta B} = |\mathbb 1_A - \mathbb 1_B| = \max(\mathbb 1_A,\mathbb 1_B) - \min(\mathbb 1_A,\mathbb 1_B) = \mathbb 1_{A\cup B} - \mathbb 1_{A\cap B} = \mathbb 1_A + \mathbb 1_B - 2\mathbb 1_A \cdot \mathbb 1_B.$$
 			</li>
@@ -149,6 +149,18 @@ A &\longmapsto &\mathbb 1_A
 				Ainsi, $\Phi$ est une bijection entre $\mathcal{P}(E)$ et $\{0,1\}^E$ et sa bijection réciproque est $\Phi^{-1}(f) = f^{-1}(\{1\})$.
 			</li>
 		</ol>
+</details>
+
+<details>
+  <summary><b>Pour aller plus loin</b></summary>
+    <ul>
+      <li>
+				<a href="denombrement#formule-du-crible">Formule du crible</a>
+			</li>
+			<li>
+				<a href="groupes#parties-et-difference-symetrique">L'ensemble des parties muni de la différence symétrique est un groupe abélien</a>
+      </li>
+    </ul>
 </details>
 
 ---

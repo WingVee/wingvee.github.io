@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Vendredi 12 juillet 2024**
+
+Ajout de l'exercice : [Formule du crible](/denombrement#formule-du-crible).
+
 **Jeudi 11 juillet 2024**
 
 Ajout de l'exercice : [L'ensemble des parties muni de la différence symétrique est un groupe abélien](/groupes#parties-et-difference-symetrique).
