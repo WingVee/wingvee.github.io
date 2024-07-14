@@ -10,9 +10,98 @@ redirect_from:
 
 ---
 
+<h3 id="theoreme-de-wilson">
+  <a href="#theoreme-de-wilson" class="header">
+  Théorème de Wilson (1770) - Un critère de primalité</a>
+</h3>
+
+L'objectif de cet exercice est de montrer le théorème de Wilson (de plusieurs manières différentes) :
+
+$$\text{Soit } p\geq 2. \text{ Alors } p \text{ est premier} \iff (p-1)!\equiv -1\ [p].$$
+
+Sens facile : Montrer que si $p$ n'est pas premier, alors $(p-1)!+1\not\equiv 0\ [p]$.
+
+**Première méthode : inverses de $\mathbb{Z}/p\mathbb{Z}^*$**
+
+1. Montrer que si $p$ est premier, alors tout élément $\overline k$ de $\mathbb{Z}/p\mathbb{Z}^*$ admet un inverse. Étudier le cas où l'inverse de $\overline k$ est $\overline k$ lui-même.
+
+2. En déduire le théorème de Wilson.
+
+**Deuxième méthode : avec un polynôme**
+
+<ol>
+  <li>
+    Soit $p$ un nombre premier. Considérons le polynôme
+    $$P(X) = X^{p-1}-1 - (X-1)(X-2)\dots(X-(p-1)).$$
+    Montrer que $P$ est le polynôme nul dans $\mathbb{Z}/p\mathbb{Z}[X]$, i.e. les coefficients de $P$ sont nuls modulo $p$.<br><br>
+  </li>
+  <li>
+    En déduire le théorème de Wilson.
+  </li>
+</ol>
+
+<details>
+  <summary><b>Remarque</b></summary>
+    Cette caractérisation des nombres premiers est très peu utilisée en pratique puisqu'il est laborieux de calculer $(p-1)!$ pour des grands nombres, ce critère de primalité est intéressant d'un point de vue théorique.
+</details>
+
+<details>
+  <summary><b>Indications</b></summary>
+    <details>
+      <summary><u>Sens facile</u></summary>
+        Si $p$ n'est pas premier, alors il existe $2\leq d\leq p-1$ tel que $d$ divise $p$.
+    </details>
+    <details>
+      <summary><u>Première méthode : inverses de $\mathbb{Z}/p\mathbb{Z}^*$</u></summary>
+        Regrouper les éléments de $\mathbb{Z}/p\mathbb{Z}^*$ par paires ($\overline k$ et son inverse $\overline k^{-1}$).
+    </details>
+    <details>
+      <summary><u>Deuxième méthode : avec un polynôme</u></summary>
+        Étudier le degré de $P$ et utiliser le petit théorème de Fermat.
+    </details>
+</details>
+
+<details>
+  <summary><b>Solution</b></summary>
+    Sens facile :<br>
+    Si $p$ n'est pas premier, alors il existe $2\leq d\leq p-1$ tel que $d$ divise $p$.<br>
+    En particulier, $d$ divise $(p-1)!$ et donc $d$ ne divise pas $(p-1)!+1$.<br>
+    Ainsi, $p$ ne divise pas $(p-1)!+1$, d'où $(p-1)!+1\not\equiv 0\ [p]$.<br><br>
+    Remarque : on ne peut pas utiliser le fait que $p = ab$ avec $1<a,b<p$ et que $p=ab$ divise $(p-1)!$ car $a$ et $b$ ne sont pas forcément distincts (prendre $p=4$ par exemple).<br><br>
+    <b>Première méthode : inverses de $\mathbb{Z}/p\mathbb{Z}^*$</b>
+    <ol>
+      <li>
+        Si $p$ est premier, alors $\mathbb{Z}/p\mathbb{Z}$ est un corps, donc tout élément non nul de $\mathbb{Z}/p\mathbb{Z}$ admet un inverse.<br>
+        Soit $\overline k\in\mathbb{Z}/p\mathbb{Z}^*$ qui est son propre inverse. On a alors :
+        $$\overline k^{-1} = \overline k \Longleftrightarrow \overline k^2 = \overline 1 \Longleftrightarrow (\overline k-\overline 1)(\overline k+\overline 1) = \overline 0 \Longleftrightarrow \overline k = \pm\overline 1.$$
+      </li>
+      <li>
+        Dans $\mathbb{Z}/p\mathbb{Z}^*$, on a :
+        $$\overline{(p-1)!} = \overline 1\times \overline 2\times \dots \times \overline{p-1} = \overline 1 \times \overline{p-1} = \overline{-1}$$
+        car on peut regrouper chaque élément $\overline k$ dans le produit $\overline 2\times \dots \times\overline{p-2}$ avec son inverse $\overline k^{-1} \neq \overline k$, et le produit de chaque paire vaut $\overline 1$.
+        Donc $(p-1)!\equiv -1\ [p]$ si $p$ est premier.
+      </li>
+    </ol>
+    <b>Deuxième méthode : avec un polynôme</b>
+    <ol>
+      <li>
+        $P$ est de degré strictement inférieur à $p-1$ et on vérifie que $P(k)\equiv 0\ [p]$ pour $k\in\{1,\dots,p-1\}$.<br>
+        En effet, d'après le petit théorème de Fermat, on a $k^{p-1}\equiv 1\ [p]$ pour tout $k\in\mathbb{Z}$ tel que $p\nmid k$.<br>
+        Ainsi, $P(k)\equiv 0\ [p]$ pour $k\in\{1,\dots,p-1\}$.<br>
+        Dans $\mathbb{Z}/p\mathbb{Z}[X]$, $P$ possède donc $p-1$ racines distinctes. Puisque $P$ est de degré strictement inférieur à $p-1$ et que $\mathbb{Z}/p\mathbb{Z}$ est un corps, $P$ est le polynôme nul dans $\mathbb{Z}/p\mathbb{Z}[X]$.
+      </li>
+      <li>
+        $P$ étant le polynôme nul dans $\mathbb{Z}/p\mathbb{Z}[X]$, on a $P(k)\equiv 0\ [p]$ pour tout $k\in\mathbb{Z}$.<br>
+        En évaluant en $X=0$, on obtient $P(0) = -1 - (-1)^{p-1}(p-1)! \equiv 0\ [p]$, d'où le théorème de Wilson en remarquant que $(-1)^{p-1} \equiv 1\ [p]$ (dans tous les cas, que $p=2$ ou $p$ impair).
+      </li>
+    </ol>
+</details>
+
+---
+
 <h3 id="formule-de-legendre">
   <a href="#formule-de-legendre" class="header">
-  Formule de Legendre (1830)</a>
+  Formule de Legendre (1830) - Valuation $p$-adique de $n!$</a>
 </h3>
 
 Soient $n\in\mathbb{N}^*$ et $p$ un nombre premier.<br>
@@ -75,6 +164,15 @@ $$v_p(n!)=\sum_{k=1}^{\infty}\left\lfloor\frac{n}{p^k}\right\rfloor.$$
     </details>
 </details>
 
+<details>
+  <summary><b>Pour aller plus loin</b></summary>
+    <ul>
+      <li>
+        <a href="#formule-de-legendre-2">Formule de Legendre (1830) - Forme alternative</a>
+      </li>
+    </ul>
+</details>
+
 ---
 
 <h3 id="formule-de-legendre-2">
@@ -82,17 +180,18 @@ $$v_p(n!)=\sum_{k=1}^{\infty}\left\lfloor\frac{n}{p^k}\right\rfloor.$$
   Formule de Legendre (1830) - Forme alternative</a>
 </h3>
 
-On pourra admettre la formule de Legendre (traitée dans [l'exercice précédent](#formule-de-legendre)) :
-
-$$v_p(n!)=\sum_{k=1}^{\infty}\left\lfloor\frac{n}{p^k}\right\rfloor$$
-
-où $n\in\mathbb{N}^*$, $p$ est un nombre premier et $v_p(n)$ est la valuation $p$-adique de $n$, c'est-à-dire l'exposant de $p$ dans la décomposition en facteurs premiers de $n$ (de manière équivalente, le plus grand entier $k$ tel que $p^k$ divise $n$).
+Soient $n\in\mathbb{N}^*$ et $p$ un nombre premier.<br>
+On note $v_p(n)$ la valuation $p$-adique de $n$, c'est-à-dire l'exposant de $p$ dans la décomposition en facteurs premiers de $n$ (de manière équivalente, le plus grand entier $k$ tel que $p^k$ divise $n$).
 
 Montrer la forme alternative de la formule de Legendre :
 
 $$v_p(n!)=\frac{n-s_p(n)}{p-1}$$
 
 où $s_p(n)$ est la somme des chiffres de l'écriture de $n$ en base $p$.
+
+On pourra admettre la formule de Legendre (traitée dans [l'exercice précédent](#formule-de-legendre)) :
+
+$$v_p(n!)=\sum_{k=1}^{\infty}\left\lfloor\frac{n}{p^k}\right\rfloor.$$
 
 <details>
   <summary><b>Indications</b></summary>
@@ -105,6 +204,7 @@ où $s_p(n)$ est la somme des chiffres de l'écriture de $n$ en base $p$.
     Écrivons $n$ en base $p$ : $\displaystyle n = \overline{a_r\dots a_1a_0} = a_0 + \dots + a_rp^r = \sum_{j=0}^r a_jp^j$ avec $a_j\in\{0,\ldots,p-1\}$ et $a_r\neq 0$.<br>
     On remarque que si $k>r$, alors $\displaystyle\left\lfloor\frac{n}{p^k}\right\rfloor = 0$ car $p^k>n$.<br>
     Et si $1\leq k\leq r$, puisque $\displaystyle 0\leq \frac{a_0+\dots+a_{k-1}p^{k-1}}{p^k}<1$ et que $\displaystyle\frac{a_k p^k + \dots + a_rp^r}{p^k}$ est entier, on a $$\left\lfloor\frac{n}{p^k}\right\rfloor = \left\lfloor\frac{a_0+\dots+a_{k-1}p^{k-1}}{p^k}+\frac{a_kp^k+\dots+a_rp^r}{p^k}\right\rfloor = a_k + \dots + a_r p^{r-k} = \sum_{j=k}^r a_jp^{j-k}.$$
+    Autrement dit, si $n = \overline{a_r\dots a_1a_0}$, alors $\displaystyle\left\lfloor\frac{n}{p^k}\right\rfloor = \overline{a_r\dots a_k}$ pour tout $k\in\mathbb N$ (c'est exactement comme en base décimale où la partie entière de $n$ divisé par $10^k$ revient à enlever les $k$ derniers chiffres de $n$ en base 10).<br>
     Ainsi, on a :
     $$\begin{align*}
     v_p(n!) &= \sum_{k=1}^{\infty}\left\lfloor\frac{n}{p^k}\right\rfloor = \sum_{k=1}^{r}\left\lfloor\frac{n}{p^k}\right\rfloor \qquad \text{(formule de Legendre)}\\

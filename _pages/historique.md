@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Samdi 13 juillet 2024**
+
+Ajout de l'exercice : [Théorème de Wilson (1770) - Un critère de primalité](/arithmetique-des-entiers#theoreme-de-wilson).
+
 **Vendredi 12 juillet 2024**
 
 Ajout de l'exercice : [Formule du crible](/denombrement#formule-du-crible).
