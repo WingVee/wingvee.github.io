@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Dimanche 14 juillet 2024**
+
+Ajout de l'exercice : [Racines rationnelles de polynômes entiers (condition nécessaire)](/arithmetique-des-polynomes#cn-racines-rationnelles-polynomes-entiers).
+
 **Samdi 13 juillet 2024**
 
 Ajout de l'exercice : [Théorème de Wilson (1770) - Un critère de primalité](/arithmetique-des-entiers#theoreme-de-wilson).
