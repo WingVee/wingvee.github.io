@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Lundi 15 juillet 2024**
+
+Ajout de l'exercice : [Vitesse de convergence d'une suite récurrente](/calculs-asymptotiques#vitesse-de-convergence-suite-recurrente).
+
 **Dimanche 14 juillet 2024**
 
 Ajout de l'exercice : [Racines rationnelles de polynômes entiers (condition nécessaire)](/arithmetique-des-polynomes#cn-racines-rationnelles-polynomes-entiers).
