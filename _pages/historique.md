@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Mardi 16 juillet 2024**
+
+Ajout de l'exercice : [PC X-ESPCI 2023 - Vitesse de convergence d'une suite récurrente](/oraux#beos-7214-1).
+
 **Lundi 15 juillet 2024**
 
 Ajout de l'exercice : [Vitesse de convergence d'une suite récurrente](/calculs-asymptotiques#vitesse-de-convergence-suite-recurrente).

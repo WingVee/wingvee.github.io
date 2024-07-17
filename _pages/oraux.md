@@ -8,6 +8,89 @@ redirect_from:
 
 ---
 
+<h3 id="beos-7214-1">
+  <a href="#beos-7214-1" class="header">
+  PC X-ESPCI 2023 - Vitesse de convergence d'une suite récurrente</a>
+</h3>
+
+On définit une suite réelle $(u_n)\_{n \in \mathbb{N}}$ par $u_0 > 0$ et la relation de récurrence $u_{n+1} = u_n - e^{-\frac 1{u_n}}$.
+
+1. Montrer que cette suite est bien définie, puis qu'elle converge. Préciser sa limite.
+2. Pour tout $\alpha > 0$, montrer que la suite $(n^{\alpha} u_n)_{n \in \mathbb{N}^*}$ tend vers $+\infty$.
+
+**Mots-clés** : suite récurrente, calculs asymptotiques
+
+**Source** : <a href="https://beos.prepas.org/sujet.php?id=7214" target="_blank">BEOS 7214</a>
+
+<details>
+  <summary><b>Remarques</b></summary>
+    Ce résultat découle du résultat plus général traité dans <a href="calculs-asymptotiques#vitesse-de-convergence-suite-recurrente">cet exercice</a>.
+</details>
+
+<details>
+  <summary><b>Indications</b></summary>
+    <ol>
+      <li>Écrire $u_{n+1} = f(u_n)$ et étudier $f$.</li>
+      <li>Montrer qu'il s'agit d'obtenir $\displaystyle \frac{1}{u_n^{1/\alpha}} = o(n)$.<br>
+      Montrer que $\displaystyle \frac{1}{u_{n+1}^{1/\alpha}} = \frac{1}{u_n^{1/\alpha}} + o(u_n^{\beta-1/\alpha})$ pour tout $\beta > 0$.</li>
+    </ol>
+</details>
+
+<details>
+  <summary><b>Solution</b></summary>
+    <ol>
+      <li>
+        <u>Bonne définition de la suite :</u><br>
+        Posons $f(x) = x - e^{-\frac 1{x}}$ définie sur $\mathbb{R}_+^*$.<br>
+        Soit $x > 0$. On a
+        $$\begin{align*}
+        f(x) > 0 &\iff x > e^{-\frac 1{x}}\\
+        &\iff \ln(x) > -\frac 1{x}\\
+        &\iff -\ln(x) < \frac 1{x}\\
+        &\iff \ln\left(\frac 1x\right) < \frac 1x.
+        \end{align*}$$
+        Or, l'inégalité $\ln(y) \leq y-1 < y$ est vérifiée pour tout $y > 0$, donc $\ln\left(\frac 1x\right) < \frac 1x$ pour tout $x > 0$.<br>
+        Ainsi, $u_{n+1} = f(u_n)$ est bien définie pour tout $n\in\mathbb{N}$ car $u_0 > 0$ et $\ f(x) > 0$ pour tout $x > 0$.<br><br>
+        <u>Convergence de la suite et limite :</u><br>
+        On a $u_{n+1} - u_n = -e^{-\frac 1{u_n}} < 0$, donc $(u_n)$ est (strictement) décroissante.<br>
+        Ainsi, la suite $(u_n)$ est décroissante et minorée par $0$, donc elle converge vers une limite $\ell\geq 0$.<br>
+        On remarque que $\ f$ est continue sur $\mathbb{R}_+^*$ et est prolongeable par continuité en $0$ en posant $f(0) = 0$.<br>
+        Par continuité de $\ f$ (sur $\mathbb R$), on a $\ell = f(\ell)$. Or, $f(x) < x$ pour tout $x > 0$, donc $\ell = 0$.<br>
+        Donc $u_n \underset{n\to+\infty}{\longrightarrow} 0$.
+      </li>
+      <li>
+        Soit $\alpha > 0$. On a l'équivalence suivante (avec $u_n > 0$) :
+        $$\begin{align*}
+        n^{\alpha}u_n \xrightarrow[n\to +\infty]{} +\infty &\iff \frac{1}{n^{\alpha}u_n} \xrightarrow[n\to +\infty]{} 0\\
+        &\iff \frac{1}{n u_n^{1/\alpha}} \xrightarrow[n\to +\infty]{} 0\\
+        &\iff \frac{1}{n u_n^{1/\alpha}} = o(1)\\
+        &\iff \frac{1}{u_n^{1/\alpha}} = o(n).
+        \end{align*}$$
+        Nous allons démontrer cette dernière affirmation. Faisons un développement asymptotique :
+        $$\begin{align*}
+        \frac{1}{u_{n+1}^{1/\alpha}} &= \frac{1}{\left(u_n - e^{-\frac 1{u_n}}\right)^{1/\alpha}}\\
+        &= \frac{1}{u_n^{1/\alpha}}\left(1 - \frac{1}{u_n}e^{-\frac 1{u_n}}\right)^{-1/\alpha}\\
+        &= \frac{1}{u_n^{1/\alpha}}\left(1 + o(u_n^{\beta})\right)^{-1/\alpha}  \qquad \text{pour tout } \beta > 0\ (\text{croissances comparées})\\
+        &=\frac{1}{u_n^{1/\alpha}} + o(u_n^{\beta-1/\alpha}).
+        \end{align*}$$
+        En choisissant $\beta = 1/\alpha$, on a $\displaystyle \frac{1}{u_{n+1}^{1/\alpha}} - \frac{1}{u_n^{1/\alpha}} = o(1)$, donc par télescopage :
+        $$\frac{1}{u_n^{1/\alpha}} = \frac{1}{u_0^{1/\alpha}} + o(n) = o(n).$$
+        Ce qui conclut la démonstration.
+      </li>
+    </ol>
+</details>
+
+<details>
+  <summary><b>Pour aller plus loin</b></summary>
+    <ul>
+      <li>
+        <a href="calculs-asymptotiques#vitesse-de-convergence-suite-recurrente">Vitesse de convergence d'une suite récurrente</a>
+      </li>
+    </ul>
+</details>
+
+---
+
 <h3 id="mon-oral-ens-ulsr">
   <a href="#mon-oral-ens-ulsr" class="header">
   Mon oral ENS Ulm/Lyon/Paris-Saclay/Rennes</a>
