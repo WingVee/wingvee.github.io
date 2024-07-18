@@ -8,6 +8,62 @@ redirect_from:
 
 ---
 
+<h3 id="beos-8272">
+  <a href="#beos-8272" class="header">
+  MP Mines-Ponts 2024 - Nombres ne contenant pas un chiffre donné</a>
+</h3>
+
+Soit $d$ un entier compris entre 0 et 9. On note $\mathbb{N}_{d}$ l'ensemble des entiers naturels non nuls ne contenant pas $d$ dans leur écriture décimale.
+
+1. Montrer que $\mathbb{N}_{d}$ est en bijection avec $\mathbb{N}$.
+2. Montrer que $\left(\frac{1}{n}\right)\_{n\in \mathbb{N}_{d}}$ est sommable.
+3. Soit $n$ entier naturel non nul, on munit $\Omega_{n}=\\{1,\dots,n\\}$ de la probabilité uniforme. Déterminer la limite lorsque $n\to +\infty $ de la probabilité qu'un entier de $\Omega_{n}$ ne contienne pas le chiffre $d$. Interprétation ?
+
+**Mots-clés** : dénombrabilité, sommabilité, probabilités, dénombrement
+
+**Source** : <a href="https://beos.prepas.org/sujet.php?id=8272" target="_blank">BEOS 8272</a>
+
+<details>
+  <summary><b>Indications (fournies par l'examinateur durant l'épreuve)</b></summary>
+    <ol>
+      <li>Penser à la dénombrabilité.</li>
+      <li>Trouver une partition bien choisie de $\mathbb{N}_{d}$.</li>
+      <li>Raisonner en termes de cardinalités.</li>
+    </ol>
+</details>
+
+<details>
+  <summary><b>Solution</b></summary>
+    <ol>
+      <li>
+        $\mathbb{N}_{d}$ est clairement une partie infinie de $\mathbb{N}$, donc $\mathbb{N}_{d}$ est dénombrable, i.e. en bijection avec $\mathbb{N}$.
+      </li>
+      <li>
+        Soit $m\in\mathbb{N}^*$ et comptons (grossièrement) le nombre d'entiers de $\mathbb{N}_{d}$ à $m$ chiffres.<br>
+        Pour chaque chiffre, on a au plus 9 choix (car on ne peut pas choisir $d$), donc il y a au plus $9^m$ entiers de $\mathbb{N}_{d}$ à $m$ chiffres.<br>
+        <ol> Remarque : ce n'est pas exactement $9^m$ car un nombre ne peut pas commencer par un 0, mais on peut négliger ce détail puisque $9^m$ est une majoration suffisante pour conclure par la suite. Le nombre exact est $9^m$ pour $\mathbb{N}_{0}$ et $8\times 9^{m-1}$ pour les $\mathbb{N}_{d}$ avec $d\neq 0$.</ol>
+        D'après le théorème de sommation par paquets pour des réels positifs, on a :
+        $$\begin{align*}
+        \sum_{n\in\mathbb{N}_{d}}\frac{1}{n}&=\sum_{m=1}^{+\infty}\left(\sum_{\substack{n\in\mathbb{N}_{d}\\10^{m-1}\leq n<10^m}}\frac{1}{n}\right)\leq\sum_{m=1}^{+\infty}\left(\sum_{\substack{n\in\mathbb{N}_{d}\\10^{m-1}\leq n<10^m}}\frac{1}{10^{m-1}}\right)\\
+        &\leq\sum_{m=1}^{+\infty}\left(\frac{9^m}{10^{m-1}}\right)=10\sum_{m=1}^{+\infty}\left(\frac{9}{10}\right)^m=10\frac{9/10}{1-9/10}=90\\
+        &<+\infty.
+        \end{align*}$$
+        Donc la famille $\displaystyle \left(\frac{1}{n}\right)_{n\in \mathbb{N}_{d}}$ est sommable.
+      </li>
+      <li>
+        Soit $n\in\mathbb{N}^*$ et $m$ le nombre de chiffres de $n$ (remarque : $m=\lfloor\log_{10}(n)\rfloor+1$).<br>
+        Notons $A_k$ l'ensemble des entiers de $\mathbb{N}_{d}$ à $k$ chiffres, i.e. $A_k=\mathbb{N}_{d}\cap\{10^{k-1},\dots,10^k-1\}$.<br>
+        Ainsi, on a
+        $$\displaystyle \Omega_n = \mathbb{N}_{d}\cap \{1,\dots,n\}\subseteq \mathbb{N}_{d}\cap\{1,\dots,10^{m}-1\}=\mathbb{N}_{d}\cap\bigsqcup_{k=1}^{m}\{10^{k-1},\dots,10^k-1\}=\bigsqcup_{k=1}^{m}A_k.$$
+        Donc $\displaystyle \operatorname{Card}(\Omega_n)\leq\sum_{k=1}^{m}\operatorname{Card}(A_k)\leq\sum_{k=1}^{m}9^k=9\frac{9^m-1}{9-1}\leq 9^{m+1}$.<br>
+        Ainsi, $\displaystyle 0\leq \mathbb{P}(\Omega_n) = \frac{\operatorname{Card}(\Omega_n)}{n}\leq\frac{9^{m+1}}{n}\leq\frac{9^{m+1}}{10^{m-1}}=90\left(\frac{9}{10}\right)^m\xrightarrow[n\to +\infty]{}0$ (car $m\to+\infty$ lorsque $n\to +\infty$).<br><br>
+        L'interprétation est que la "probabilité" qu'un entier naturel non nul ne contienne pas le chiffre $d$ est nul.
+      </li>
+    </ol>
+</details>
+
+---
+
 <h3 id="beos-7214-1">
   <a href="#beos-7214-1" class="header">
   PC X-ESPCI 2023 - Vitesse de convergence d'une suite récurrente</a>

@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Mercredi 17 juillet 2024**
+
+Ajout de l'exercice : [MP Mines-Ponts 2024 - Nombres ne contenant pas un chiffre donné](/oraux#beos-8272).
+
 **Mardi 16 juillet 2024**
 
 Ajout de l'exercice : [PC X-ESPCI 2023 - Vitesse de convergence d'une suite récurrente](/oraux#beos-7214-1).
