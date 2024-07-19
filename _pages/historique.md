@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Jeudi 18 juillet 2024**
+
+Ajout de l'exercice : [Une fonction bornée à dérivée seconde bornée a une dérivée bornée](/derivabilite#fonctions-a-derivees-bornees-2).
+
 **Mercredi 17 juillet 2024**
 
 Ajout de l'exercice : [MP Mines-Ponts 2024 - Nombres ne contenant pas un chiffre donné](/oraux#beos-8272).
