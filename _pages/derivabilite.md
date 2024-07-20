@@ -15,9 +15,17 @@ redirect_from:
 
 Soit $\ f:\mathbb{R}\to\mathbb{R}$ une fonction de classe $\mathcal{C}^2$ telle que $f$ et $f''$ sont bornées sur $\mathbb{R}$ par des constantes $M_0$ et $M_2$.<br>
 Montrer que $f'$ est bornée sur $\mathbb{R}$ par une constante $M_1 = 2\sqrt{M_0M_2}$.<br><br>
-Reformulé autrement, en notant $\displaystyle \Vert f\Vert_{\infty} = \sup_{x\in\mathbb{R}}\vert f(x)\vert$ ($\in\mathbb{R}_+\cup\{+\infty\}$ a priori), on a l'implication suivante :
+Reformulé autrement, en notant $\displaystyle \Vert f\Vert_{\infty} = \sup_{x\in\mathbb{R}}\vert f(x)\vert$ ($\in\mathbb{R}_+\cup\\\{+\infty\\}$ a priori), on a l'implication suivante :
 
 $$\Big(\Vert f\Vert_{\infty} \leq M_0 \text{ et } \Vert f''\Vert_{\infty} \leq M_2\Big) \implies \Vert f'\Vert_{\infty} \leq 2\sqrt{M_0M_2}.$$
+
+<details>
+	<summary><b>Remarques</b></summary>
+		Plus généralement, on peut montrer que si $f$ est de classe $\mathcal{C}^n$ et que $f$ et $f^{(n)}$ sont bornées sur $\mathbb{R}$, alors $f^{(k)}$ est bornée sur $\mathbb{R}$ pour tout $k\in\{0,\ldots,n\}$. Cela est traité dans <a href="espaces-vectoriels-normes#fonctions-a-derivees-bornees">cet exercice</a>.<br><br>
+    Pour la culture générale, on peut citer l'<a href="https://en.wikipedia.org/wiki/Landau–Kolmogorov_inequality" target="_blank">inégalité de Landau-Kolmogorov</a> qui est une généralisation de ce résultat : si $f$ est de classe $\mathcal{C}^n(T,\mathbb{R})$ avec $T\subseteq\mathbb{R}$, alors, en notant $\displaystyle \Vert f\Vert_{\infty} = \sup_{x\in T}\vert f(x)\vert$ ($\in\mathbb{R}_+\cup\{+\infty\}$ a priori), on a l'inégalité suivante pour tout $1\leq k < n$ :
+    $$\Vert f^{(k)}\Vert_{\infty} \leq C(n,k,T) \cdot \Vert f\Vert^{1-k/n}_{\infty} \cdot \Vert f^{(n)}\Vert^{k/n}_{\infty} \quad\text{avec}\quad C(n,k,T)\in\mathbb{R}_+.$$
+    Dans cet exercice, on a montré que, pour $T = \mathbb{R}$, $n = 2$, $k = 1$, $C(2,1,\mathbb{R}) = 2$ convient. Mais la constante optimale est $C(2,1,\mathbb{R}) = \sqrt{2}$. Néanmoins, on a $C(2,1,[c,+∞[) = 2$ pour tout $c\in\mathbb R$.
+</details>
 
 <details>
 	<summary><b>Indications</b></summary>
@@ -38,6 +46,15 @@ $$\Big(\Vert f\Vert_{\infty} \leq M_0 \text{ et } \Vert f''\Vert_{\infty} \leq M
     On cherche à minimiser la quantité $\displaystyle g(h) = \frac{2M_0}{h} + \frac{M_2h}{2}$ pour $h > 0$.<br>
     Une étude simple de fonction montre que $g$ est minimale en $\displaystyle h = 2\sqrt{\frac{M_0}{M_2}}$ et que $\displaystyle g\left(2\sqrt{\frac{M_0}{M_2}}\right) = 2\sqrt{M_0M_2}$.<br><br>
     Ainsi, on a bien $|f'(x)| \leq 2\sqrt{M_0M_2}$ pour tout $x\in\mathbb{R}$, i.e. $\Vert f'\Vert_{\infty} \leq 2\sqrt{M_0M_2}$.
+</details>
+
+<details>
+  <summary><b>Pour aller plus loin</b></summary>
+    <ul>
+      <li>
+				<a href="espaces-vectoriels-normes#fonctions-a-derivees-bornees">Fonctions à dérivées bornées (autour de l'inégalité de Landau–Kolmogorov)</a>
+      </li>
+    </ul>
 </details>
 
 ---

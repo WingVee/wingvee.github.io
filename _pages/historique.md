@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Venredi 19 juillet 2024**
+
+Ajout de l'exercice : [Fonctions à dérivées bornées (autour de l'inégalité de Landau–Kolmogorov)](/espaces-vectoriels-normes#fonctions-a-derivees-bornees).
+
 **Jeudi 18 juillet 2024**
 
 Ajout de l'exercice : [Une fonction bornée à dérivée seconde bornée a une dérivée bornée](/derivabilite#fonctions-a-derivees-bornees-2).
