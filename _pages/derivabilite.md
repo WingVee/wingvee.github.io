@@ -44,7 +44,8 @@ $$\Big(\Vert f\Vert_{\infty} \leq M_0 \text{ et } \Vert f''\Vert_{\infty} \leq M
     En posant $h = |y-x| > 0$, on a donc l'inégalité suivante vérifiée pour tout $h > 0$ :
     $$|f'(x)| \leq \frac{2M_0}{h} + \frac{M_2h}{2}.$$
     On cherche à minimiser la quantité $\displaystyle g(h) = \frac{2M_0}{h} + \frac{M_2h}{2}$ pour $h > 0$.<br>
-    Une étude simple de fonction montre que $g$ est minimale en $\displaystyle h = 2\sqrt{\frac{M_0}{M_2}}$ et que $\displaystyle g\left(2\sqrt{\frac{M_0}{M_2}}\right) = 2\sqrt{M_0M_2}$.<br><br>
+    Une étude simple de fonction (en dérivant par exemple) montre que $g$ est minimale en $\displaystyle h = 2\sqrt{\frac{M_0}{M_2}}$ et que
+    $$g\left(2\sqrt{\frac{M_0}{M_2}}\right) = 2\sqrt{M_0M_2}.$$
     Ainsi, on a bien $|f'(x)| \leq 2\sqrt{M_0M_2}$ pour tout $x\in\mathbb{R}$, i.e. $\Vert f'\Vert_{\infty} \leq 2\sqrt{M_0M_2}$.
 </details>
 
@@ -53,6 +54,9 @@ $$\Big(\Vert f\Vert_{\infty} \leq M_0 \text{ et } \Vert f''\Vert_{\infty} \leq M
     <ul>
       <li>
 				<a href="espaces-vectoriels-normes#fonctions-a-derivees-bornees">Fonctions à dérivées bornées (autour de l'inégalité de Landau–Kolmogorov)</a>
+      </li>
+      <li>
+				<a href="oraux#beos-7413">PC X-ESPCI 2023 - Suite de fonctions et convergence uniforme des dérivées vers 0</a>
       </li>
     </ul>
 </details>

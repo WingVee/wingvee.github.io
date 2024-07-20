@@ -97,6 +97,9 @@ $$\Big(\Vert f\Vert_{\infty} < +\infty \text{ et } \Vert f^{(n)}\Vert_{\infty} <
       <li>
 				<a href="derivabilite#fonctions-a-derivees-bornees-2">Une fonction bornée à dérivée seconde bornée a une dérivée bornée</a>
       </li>
+      <li>
+				<a href="oraux#beos-7413">PC X-ESPCI 2023 - Suite de fonctions et convergence uniforme des dérivées vers 0</a>
+      </li>
     </ul>
 </details>
 

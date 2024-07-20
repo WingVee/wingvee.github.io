@@ -3,7 +3,7 @@ layout: default
 title: Oraux
 permalink: oraux
 redirect_from:
-    - oral
+  - oral
 ---
 
 ---
@@ -141,6 +141,72 @@ On définit une suite réelle $(u_n)\_{n \in \mathbb{N}}$ par $u_0 > 0$ et la re
     <ul>
       <li>
         <a href="calculs-asymptotiques#vitesse-de-convergence-suite-recurrente">Vitesse de convergence d'une suite récurrente</a>
+      </li>
+    </ul>
+</details>
+
+---
+
+<h3 id="beos-7413">
+  <a href="#beos-7413" class="header">
+  PC X-ESPCI 2023 - Suite de fonctions et convergence uniforme des dérivées vers 0</a>
+</h3>
+
+Soit $(f_n)_{n\in\mathbb{N}}$ une suite de fonctions de classe $\mathcal{C}^3$ sur $\mathbb{R}$ telle que :
+- $\displaystyle \sup_{n\in\mathbb{N}}\left(\sup_{x\in\mathbb{R}}\vert f_n^{(3)}(x)\vert\right) \leq C$ avec $C\in\mathbb{R}_+$,
+- $\displaystyle \sup_{x\in\mathbb{R}}\vert f_n(x)\vert \xrightarrow[n\to +\infty]{} 0$.
+
+Montrer que $\displaystyle \sup_{x\in\mathbb{R}}\vert f_n^{(i)}(x)\vert \xrightarrow[n\to +\infty]{} 0$ pour $i\in\\{1,2\\}$.
+
+**Mots-clés** : dérivabilité, calculs asymptotiques, suites de fonctions
+
+**Source** : <a href="https://beos.prepas.org/sujet.php?id=7413" target="_blank">BEOS 7413</a>
+
+<details>
+  <summary><b>Remarques</b></summary>
+    L'<a href="https://en.wikipedia.org/wiki/Landau–Kolmogorov_inequality" target="_blank">inégalité de Landau-Kolmogorov</a> permet de résoudre rapidement ce problème.<br>
+    Elle stipule que si $\ f$ est de classe $\mathcal{C}^p(T,\mathbb{R})$ avec $T\subseteq\mathbb{R}$, alors, en notant $\displaystyle \Vert f\Vert_{\infty} = \sup_{x\in T}\vert f(x)\vert$ ($\in\mathbb{R}_+\cup\{+\infty\}$ a priori), on a l'inégalité suivante pour tout $1\leq k < p$ :
+    $$\Vert f^{(k)}\Vert_{\infty} \leq C(p,k,T) \cdot \Vert f\Vert^{1-k/p}_{\infty} \cdot \Vert f^{(p)}\Vert^{k/p}_{\infty} \quad\text{avec}\quad C(p,k,T)\in\mathbb{R}_+.$$
+    Ainsi, dans le cadre du problème, on a
+    $$\Vert f_n'\Vert_{\infty} \leq C(3,1,\mathbb{R}) \cdot \Vert f_n\Vert^{2/3}_{\infty} \cdot \Vert f_n^{(3)}\Vert^{1/3}_{\infty}\leq C(3,1,\mathbb{R}) \cdot C^{1/3} \cdot \Vert f_n\Vert^{2/3}_{\infty} \xrightarrow[n\to +\infty]{}0 \quad\text{et}$$
+    $$\Vert f_n''\Vert_{\infty} \leq C(3,2,\mathbb{R}) \cdot \Vert f_n\Vert^{1/3}_{\infty} \cdot \Vert f_n^{(3)}\Vert^{2/3}_{\infty}\leq C(3,2,\mathbb{R}) \cdot C^{2/3} \cdot \Vert f_n\Vert^{1/3}_{\infty} \xrightarrow[n\to +\infty]{}0.$$
+</details>
+
+<details>
+  <summary><b>Indications</b></summary>
+    On note $\displaystyle\Vert f\Vert_{\infty} = \sup_{x\in\mathbb{R}}\vert f(x)\vert \in\mathbb{R}_+\cup\{+\infty\}$.<br>
+    Lemme : montrer que $\Vert f'\Vert_{\infty} \leq 2\sqrt{\Vert f\Vert_{\infty}\Vert f''\Vert_{\infty}}$ pour toute fonction $f$ de classe $\mathcal{C}^2$ sur $\mathbb{R}$ (cf. <a href="derivabilite#fonctions-a-derivees-bornees-2">cet exercice</a>).
+</details>
+
+<details>
+  <summary><b>Solution</b></summary>
+    On note $\displaystyle\Vert f\Vert_{\infty} = \sup_{x\in\mathbb{R}}\vert f(x)\vert \in\mathbb{R}_+\cup\{+\infty\}$.<br>
+    Lemme : $\Vert f'\Vert_{\infty} \leq 2\sqrt{\Vert f\Vert_{\infty}\Vert f''\Vert_{\infty}}$ pour toute fonction $f$ de classe $\mathcal{C}^2$ sur $\mathbb{R}$ (cf. <a href="derivabilite#fonctions-a-derivees-bornees-2">cet exercice</a>).<br>
+    Cela découle de la formule de Taylor-Lagrange. Pour $x\in\mathbb R$, pour tout réel $y\neq x$, il existe $c\in\,]x,y[$ tel que
+    $$f(y) = f(x) + f'(x)(y-x) + \frac12\ f''(c)\cdot(y-x)^2.$$
+    Donc, en posant $h = |y-x| > 0$, on a
+    $$|f'(x)| = \left|\frac{f(y) - f(x)}{y-x} - \frac12 f''(c)\cdot(y-x)\right|\leq \frac{2\Vert f\Vert_{\infty}}{h} + \frac{\Vert f''\Vert_{\infty}h}{2}.$$
+    En étudiant la fonction $\displaystyle g(h) = \frac{2\Vert f\Vert_{\infty}}{h} + \frac{\Vert f''\Vert_{\infty}h}{2}$ (en dérivant par exemple), on trouve que le minimum est atteint en $\displaystyle h = 2\sqrt{\frac{\Vert f\Vert_{\infty}}{\Vert f''\Vert_{\infty}}}$, et que $\displaystyle g(h) = 2\sqrt{\Vert f\Vert_{\infty}\Vert f''\Vert_{\infty}}$.
+    D'où
+    $$\Vert f'\Vert_{\infty} \leq 2\sqrt{\Vert f\Vert_{\infty}\Vert f''\Vert_{\infty}}.$$
+    Reprenons le problème. En utilisant le lemme, on a
+    $$\Vert f'\Vert_{\infty} \leq 2\sqrt{\Vert f\Vert_{\infty}\Vert f''\Vert_{\infty}} \leq 2\sqrt{\Vert f\Vert_{\infty}\cdot2\sqrt{\Vert f'\Vert_{\infty}\Vert f'''\Vert_{\infty}}} = 2^{3/2}\Vert f\Vert_{\infty}^{1/2}\Vert f'\Vert_{\infty}^{1/4}\Vert f'''\Vert_{\infty}^{1/4}.$$
+    Donc, en utilisant les hypothèses du problème, on a
+    $$\Vert f_n'\Vert_{\infty}^{3/4} \leq 2^{3/2}\Vert f_n\Vert_{\infty}^{1/2}\Vert f_n'''\Vert_{\infty}^{1/4} \leq 2^{3/2}C^{1/4}\Vert f_n\Vert_{\infty}^{1/2} \xrightarrow[n\to +\infty]{} 0.$$
+    Donc $\Vert f_n'\Vert_{\infty} \xrightarrow[n\to +\infty]{} 0$. De même, on a
+    $$\Vert f_n''\Vert_{\infty} \leq 2\sqrt{\Vert f_n'\Vert_{\infty}\Vert f_n'''\Vert_{\infty}} \leq 2C^{1/2}\sqrt{\Vert f_n'\Vert_{\infty}} \xrightarrow[n\to +\infty]{} 0.$$
+    D'où le résultat :
+    $$\sup_{x\in\mathbb{R}}\vert f_n^{(i)}(x)\vert = \Vert f_n^{(i)}\Vert_{\infty} \xrightarrow[n\to +\infty]{} 0 \quad\text{pour } i\in\{1,2\}.$$
+</details>
+
+<details>
+  <summary><b>Pour aller plus loin</b></summary>
+    <ul>
+      <li>
+				<a href="derivabilite#fonctions-a-derivees-bornees-2">Une fonction bornée à dérivée seconde bornée a une dérivée bornée</a>
+      </li>
+      <li>
+				<a href="espaces-vectoriels-normes#fonctions-a-derivees-bornees">Fonctions à dérivées bornées (autour de l'inégalité de Landau–Kolmogorov)</a>
       </li>
     </ul>
 </details>

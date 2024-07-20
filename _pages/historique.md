@@ -4,7 +4,11 @@ title: Historique
 permalink: historique
 ---
 
-**Venredi 19 juillet 2024**
+**Samedi 20 juillet 2024**
+
+Ajout de l'exercice oral : [PC X-ESPCI 2023 - Suite de fonctions et convergence uniforme des dérivées vers 0](/oraux#beos-7413).
+
+**Vendredi 19 juillet 2024**
 
 Ajout de l'exercice : [Fonctions à dérivées bornées (autour de l'inégalité de Landau–Kolmogorov)](/espaces-vectoriels-normes#fonctions-a-derivees-bornees).
 
@@ -14,11 +18,11 @@ Ajout de l'exercice : [Une fonction bornée à dérivée seconde bornée a une d
 
 **Mercredi 17 juillet 2024**
 
-Ajout de l'exercice : [MP Mines-Ponts 2024 - Nombres ne contenant pas un chiffre donné](/oraux#beos-8272).
+Ajout de l'exercice oral : [MP Mines-Ponts 2024 - Nombres ne contenant pas un chiffre donné](/oraux#beos-8272).
 
 **Mardi 16 juillet 2024**
 
-Ajout de l'exercice : [PC X-ESPCI 2023 - Vitesse de convergence d'une suite récurrente](/oraux#beos-7214-1).
+Ajout de l'exercice oral : [PC X-ESPCI 2023 - Vitesse de convergence d'une suite récurrente](/oraux#beos-7214-1).
 
 **Lundi 15 juillet 2024**
 
@@ -28,7 +32,7 @@ Ajout de l'exercice : [Vitesse de convergence d'une suite récurrente](/calculs-
 
 Ajout de l'exercice : [Racines rationnelles de polynômes entiers (condition nécessaire)](/arithmetique-des-polynomes#cn-racines-rationnelles-polynomes-entiers).
 
-**Samdi 13 juillet 2024**
+**Samedi 13 juillet 2024**
 
 Ajout de l'exercice : [Théorème de Wilson (1770) - Un critère de primalité](/arithmetique-des-entiers#theoreme-de-wilson).
 
