@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Dimanche 21 juillet 2024**
+
+Ajout de l'exercice : [Équivalent de la partie fractionnaire de $n!e$](/calculs-asymptotiques#equivalent-partie-fractionnaire-n-e).
+
 **Samedi 20 juillet 2024**
 
 Ajout de l'exercice oral : [PC X-ESPCI 2023 - Suite de fonctions et convergence uniforme des dérivées vers 0](/oraux#beos-7413).

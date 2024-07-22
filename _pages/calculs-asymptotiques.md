@@ -6,6 +6,55 @@ permalink: calculs-asymptotiques
 
 ---
 
+<h3 id="equivalent-partie-fractionnaire-n-e">
+  <a href="#equivalent-partie-fractionnaire-n-e" class="header">
+  Équivalent de la partie fractionnaire de $n!e$</a>
+</h3>
+
+1. Pour $x\in\mathbb{R}$, on note $\\{x\\}$ la partie fractionnaire de $x$, c'est-à-dire $\\{x\\} = x - \lfloor x\rfloor$.<br>
+Trouver un équivalent de $\\{n!e\\}$ lorsque $n\to+\infty$.
+2. Application : calculer $\displaystyle\lim_{n\to+\infty} n\sin(2\pi n!e)$.
+
+<details>
+  <summary><b>Remarques</b></summary>
+    La question 1 de cet exercice semblerait avoir été donné à l'oral PC X-ESPCI 2022 (voir <a href="https://beos.prepas.org/sujet.php?id=6933" target="_blank">BEOS 6933</a>).
+</details>
+
+<details>
+  <summary><b>Indications</b></summary>
+    Montrer que
+    $$\{n!e\} = \left\{\sum_{k=1}^{+\infty}\frac{1}{(n+1)(n+2)\cdots(n+k)}\right\}.$$
+    Puis, encadrer la somme par deux termes équivalents.
+</details>
+
+<details>
+  <summary><b>Solution</b></summary>
+    <ol>
+      <li>
+        En utilisant le fait que $\{x+k\} = \{x\}$ pour tout $x\in\mathbb{R}$ et $k\in\mathbb{Z}$, on a
+        $$\begin{align*}
+        \{n!e\} &= \left\{n!\sum_{k=0}^{+\infty}\frac{1}{k!}\right\}\\
+        &= \left\{\frac{n!}{0!} + \frac{n!}{1!} + \frac{n!}{2!} + \cdots + \frac{n!}{n!} + \frac{n!}{(n+1)!} + \frac{n!}{(n+2)!} + \cdots\right\}\\
+        &= \left\{\frac{n!}{(n+1)!} + \frac{n!}{(n+2)!} + \cdots\right\}\\
+        &= \left\{\frac{1}{n+1} + \frac{1}{(n+1)(n+2)} + \cdots\right\}\\
+        &= \left\{\sum_{k=1}^{+\infty}\frac{1}{(n+1)(n+2)\cdots(n+k)}\right\}.
+        \end{align*}$$
+        On remarque que
+        $$\frac{1}{n+1} \leq \sum_{k=1}^{+\infty}\frac{1}{(n+1)(n+2)\cdots(n+k)} \leq \sum_{k=1}^{+\infty}\frac{1}{(n+1)^{k}} = \frac{1}{n}.$$
+        Donc, $\displaystyle\frac{1}{n+1} \leq \{n!e\} \leq \frac{1}{n}$, d'où
+        $$\{n!e\} \sim \frac1n.$$
+
+      </li>
+      <li>
+        En remarquant que pour tout $x\in\mathbb{R}$, on a $\sin(2\pi x) = \sin(2\pi(\{x\} + \lfloor x\rfloor)) = \sin(2\pi\{x\})$, et que $\sin(x)\sim x$ lorsque $x\to 0$, on a
+        $$n\sin(2\pi n!e) = n\sin(2\pi\{n!e\}) \sim n\cdot 2\pi\{n!e\} \sim n\cdot 2\pi\frac1n = 2\pi.$$
+        Donc $\displaystyle\lim_{n\to+\infty} n\sin(2\pi n!e) = 2\pi$.
+      </li>
+    </ol>
+</details>
+
+---
+
 <h3 id="vitesse-de-convergence-suite-recurrente">
 	<a href="#vitesse-de-convergence-suite-recurrente" class="header">
 	Vitesse de convergence d'une suite récurrente</a>

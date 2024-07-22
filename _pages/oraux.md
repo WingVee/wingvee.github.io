@@ -8,6 +8,15 @@ redirect_from:
 
 ---
 
+<h3 id="beos-6933-2">
+  <a href="#beos-6933-2" class="header">
+  PC X-ESPCI 2022 - Équivalent de la partie fractionnaire de $n!e$</a>
+</h3>
+
+[Exercice traité ici.](calculs-asymptotiques#equivalent-partie-fractionnaire-n-e)
+
+---
+
 <h3 id="beos-8272">
   <a href="#beos-8272" class="header">
   MP Mines-Ponts 2024 - Nombres ne contenant pas un chiffre donné</a>
