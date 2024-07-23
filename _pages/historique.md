@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Lundi 22 juillet 2024**
+
+Ajout de l'exercice : [Déterminant de l'application transposée](/determinants#determinant-application-transposee).
+
 **Dimanche 21 juillet 2024**
 
 Ajout de l'exercice : [Équivalent de la partie fractionnaire de $n!e$](/calculs-asymptotiques#equivalent-partie-fractionnaire-n-e).

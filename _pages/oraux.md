@@ -8,6 +8,15 @@ redirect_from:
 
 ---
 
+<h3 id="beos-5473">
+  <a href="#beos-5473" class="header">
+  PC X-ESPCI 2019 - Déterminant de l'application transposée</a>
+</h3>
+
+[Exercice traité ici.](determinants#determinant-application-transposee)
+
+---
+
 <h3 id="beos-6933-2">
   <a href="#beos-6933-2" class="header">
   PC X-ESPCI 2022 - Équivalent de la partie fractionnaire de $n!e$</a>
