@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Mardi 23 juillet 2024**
+
+Ajout de l'exercice : [Utilisation des fonctions indicatrices pour dénombrer](/denombrement#utilisation-des-fonctions-indicatrices-pour-denombrer).
+
 **Lundi 22 juillet 2024**
 
 Ajout de l'exercice : [Déterminant de l'application transposée](/determinants#determinant-application-transposee).
