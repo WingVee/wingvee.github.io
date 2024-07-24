@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Mercredi 24 juillet 2024**
+
+Ajout de l'exercice : [Inégalité $\operatorname{Tr}(M^2) \leq \operatorname{Tr}(M^TM)$](/espaces-prehilbertiens-et-euclidiens#inegalite-trace-carree).
+
 **Mardi 23 juillet 2024**
 
 Ajout de l'exercice : [Utilisation des fonctions indicatrices pour dénombrer](/denombrement#utilisation-des-fonctions-indicatrices-pour-denombrer).
