@@ -9,7 +9,7 @@
   <a href="{{ site.baseurl }}/algebre-lineaire" class="btn">Algèbre linéaire</a>
   <a href="{{ site.baseurl }}/algebre-generale" class="btn">Algèbre générale</a>
   <a href="{{ site.baseurl }}/theorie-des-probabilites" class="btn">Théorie des probabilités</a>
-  <a href="{{ site.baseurl }}/oraux" class="btn">Oraux</a>
+  <a href="{{ site.baseurl }}/oraux-de-concours" class="btn">Oraux</a>
   <br>
 
   {% if page.url == "/fondamentaux" or
@@ -149,5 +149,13 @@
         %}
     <a href="{{ site.baseurl }}/probabilites" class="btn">Probabilités</a>
     <a href="{{ site.baseurl }}/variables-aleatoires" class="btn">Variables aléatoires</a>
+  {% endif %}
+
+  {% if page.url == "/oraux-de-concours" or
+        page.url == "/oraux-rapides" or
+        page.url == "/oraux"
+        %}
+    <a href="{{ site.baseurl }}/oraux-rapides" class="btn">Oraux rapides</a>
+    <a href="{{ site.baseurl }}/oraux" class="btn">Oraux intermédiaires et avancés</a>
   {% endif %}
 </header>

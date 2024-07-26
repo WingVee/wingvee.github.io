@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Jeudi 25 juillet 2024**
+
+Ajout du chapitre : [Oraux rapides](/oraux-rapides).
+
 **Mercredi 24 juillet 2024**
 
 Ajout de l'exercice : [Inégalité $\operatorname{Tr}(M^2) \leq \operatorname{Tr}(M^TM)$](/espaces-prehilbertiens-et-euclidiens#inegalite-trace-carree).

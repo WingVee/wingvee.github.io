@@ -1,9 +1,10 @@
 ---
 layout: default
-title: Oraux
+title: Oraux intermédiaires et avancés
 permalink: oraux
 redirect_from:
   - oral
+  - oraux-intermediaires-et-avances
 ---
 
 ---
