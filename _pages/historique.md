@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Vendredi 26 juillet 2024**
+
+Ajout de l'exercice : [Moyennes arithmétique, géométrique, harmonique et quadratiques de deux nombres](/calculs-algebriques-et-trigonometrie#moyennes-arithmetique-geometrique-harmonique-quadratique).
+
 **Jeudi 25 juillet 2024**
 
 Ajout du chapitre : [Oraux rapides](/oraux-rapides).

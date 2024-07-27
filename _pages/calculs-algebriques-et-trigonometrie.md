@@ -8,6 +8,105 @@ redirect_from:
 
 ---
 
+<h3 id="moyennes-arithmetique-geometrique-harmonique-quadratique">
+  <a href="#moyennes-arithmetique-geometrique-harmonique-quadratique" class="header">
+  Moyennes arithmétique, géométrique, harmonique et quadratiques de deux nombres</a>
+</h3>
+
+Soient $a$ et $b$ deux nombres réels strictement positifs.
+
+- La moyenne arithmétique de $a$ et $b$ est $A = \displaystyle\frac{a+b}{2}.$
+
+- La moyenne géométrique de $a$ et $b$ est $G = \displaystyle\sqrt{ab}.$
+
+- La moyenne harmonique de $a$ et $b$ est $H = \displaystyle\frac{2}{\frac{1}{a}+\frac{1}{b}}.$
+
+- La moyenne quadratique de $a$ et $b$ est $Q = \displaystyle\sqrt{\frac{a^2+b^2}{2}}.$
+
+<ol>
+  <li>
+    Montrer que $G^2 = AH.$
+  </li>
+  <li>
+    Montrer que $\displaystyle A^2 = \frac{G^2+Q^2}{2}.$
+  </li>
+  <li>
+    Montrer que $\min(a,b) \leq H \leq G \leq A \leq Q \leq \max(a,b).$
+  </li>
+  <li>
+    Montrer que chaque inégalité est une égalité si et seulement si $a=b$.
+  </li>
+</ol>
+
+Ainsi, on a
+
+$$\min(a,b) \leq \frac{2}{\frac{1}{a}+\frac{1}{b}} \leq \sqrt{ab} \leq \frac{a+b}{2} \leq \sqrt{\frac{a^2+b^2}{2}}$$
+
+avec égalité si et seulement si $a=b$.
+
+<details>
+  <summary><b>Remarques</b></summary>
+    Ces moyennes sont généralisables à $n$ nombres réels strictement positifs $a_1,\ldots,a_n$ :
+    $$A = \frac{a_1+\ldots+a_n}{n},\quad G = \sqrt[n]{a_1\ldots a_n},\quad H = \frac{n}{\frac{1}{a_1}+\ldots+\frac{1}{a_n}},\quad Q = \sqrt{\frac{a_1^2+\ldots+a_n^2}{n}}.$$
+    Les égalités des questions 1. et 2. sont fausses en général pour $n>2$, mais les inégalités restent vraies :
+    $$\min(a_1,\ldots,a_n) \leq H \leq G \leq A \leq Q \leq \max(a_1,\ldots,a_n).$$
+    C'est-à-dire :
+    $$\min(a_1,\ldots,a_n) \leq \frac{n}{\frac{1}{a_1}+\ldots+\frac{1}{a_n}} \leq \sqrt[n]{a_1\ldots a_n} \leq \frac{a_1+\ldots+a_n}{n} \leq \sqrt{\frac{a_1^2+\ldots+a_n^2}{n}} \leq \max(a_1,\ldots,a_n).$$
+    Voici une visualisation géométrique des moyennes arithmétique, géométrique, harmonique et quadratique :
+    <p align="center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Inegalites_moyennes.gif" alt="Diagramme de Venn de la différence symétrique" width="400"/>
+    </p>
+    De plus, on peut démontrer la formule $\displaystyle A^2 = \frac{G^2+Q^2}{2}$ à partir de ce dessin et en utilisant le théorème de Pythagore plusieurs fois :
+    $$A^2 + OK^2 = Q^2,\quad G^2 + OK^2 = (OP+H)^2 = A^2.$$
+    Pour finir, voici une preuve géométriques des inégalités :
+    $$\min(a,b) \leq H = \frac{2}{\frac{1}{a}+\frac{1}{b}} \leq \sqrt{ab} = G \leq \frac{a+b}{2} = A \leq \sqrt{\frac{a^2+b^2}{2}} = Q \leq \max(a,b).$$
+    <p align="center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/QM_AM_GM_HM_inequality_visual_proof.svg/1920px-QM_AM_GM_HM_inequality_visual_proof.svg.png" alt="Diagramme de Venn de la différence symétrique" width="400"/>
+    </p>
+</details>
+
+<details>
+  <summary><b>Indications</b></summary>
+    Pour la question 3., commencer par la dernière inégalité et montrer que $Q \leq \max(a,b)$, puis $A \leq Q$ etc.
+</details>
+
+<details>
+  <summary><b>Solution</b></summary>
+    <ol>
+      <li>
+        $\displaystyle AH = \frac{a+b}{2}\frac{2}{\frac{1}{a}+\frac{1}{b}} = \frac{a+b}{\frac{a+b}{ab}} = ab = G^2$.
+      </li>
+      <li>
+        $\displaystyle G^2+Q^2 = ab + \frac{a^2+b^2}{2} = \frac{2ab+a^2+b^2}{2} = 2\frac{(a+b)^2}{4} = 2A^2$.
+      </li>
+      <li>
+        $\bullet\ Q \leq \max(a,b)$ :
+        $$Q = \sqrt{\frac{a^2+b^2}{2}} \leq \sqrt{\frac{\max(a^2,b^2)+\max(a^2,b^2)}{2}} = \sqrt{\max(a^2,b^2)} = \sqrt{\max(a,b)^2} = \max(a,b).$$
+        $\bullet\ A \leq Q$ :
+        $$A \leq Q \iff A^2 \leq Q^2 \iff \frac{a^2+2ab+b^2}{4} \leq \frac{a^2+b^2}{2} \iff 0 \leq a^2-2ab+b^2 = (a-b)^2.$$
+        $\bullet\ G \leq A$ :
+        $$G \leq A \iff G^2 \leq A^2 \iff ab \leq \frac{a^2+2ab+b^2}{4} \iff 0 \leq a^2-2ab+b^2 = (a-b)^2.$$
+        $\bullet\ H \leq G$ :
+        $$H \leq G \iff \frac{2ab}{a+b} \leq \sqrt{ab} \iff \sqrt{ab} \leq \frac{a+b}{2} \iff G \leq A.$$
+        On pouvait aussi utiliser la question 1. :
+        $$\displaystyle H \leq G \iff \frac{G^2}{A} \leq G \iff G \leq A.$$
+        $\bullet\ \min(a,b) \leq H$ :
+        $$\min(a,b) \leq H = \frac{2}{\frac{1}{a}+\frac{1}{b}} \iff \frac{\frac{1}{a}+\frac{1}{b}}{2} \leq \frac{1}{\min(a,b)} = \max\left(\frac1a,\frac1b\right) \iff \frac{a'+b'}{2} \leq \max(a',b')$$
+        avec $a' = \frac1a$ et $b' = \frac1b$ des nombres réels strictement positifs, et on invoque l'inégalité $A\leq\max(a,b)$.
+      </li>
+      <li>
+        D'après les preuves de la question 3, on voit que chaque inégalité est une égalité si et seulement si $a=b$ :<br>
+        $\bullet\ Q = \max(a,b) \iff a^2+b^2 = 2\max(a^2,b^2) \iff a^2 = b^2 \iff a=b$ ($a,b>0$).<br>
+        $\bullet\ A = Q \iff (a-b)^2 = 0 \iff a=b$.<br>
+        $\bullet\ G = A \iff (a-b)^2 = 0 \iff a=b$.<br>
+        $\bullet\ H = G \iff G = A \iff a=b$.<br>
+        $\bullet\ \displaystyle \min(a,b) = H \iff \frac{\frac1a+\frac1b}{2} = \max\left(\frac1a,\frac1b\right) \iff \frac1a = \frac1b \iff a=b$.
+      </li>
+    </ol>
+</details>
+
+---
+
 <h3 id="formules-de-faulhaber-123">
   <a href="#formules-de-faulhaber-123" class="header">
   Formules de Faulhaber (exposants 1,2,3)</a>
