@@ -26,11 +26,11 @@
     <main id="content" class="main-content" role="main">
       {{ content }}
       <div class="sidebar-right">
-        <a href="#top">Retour en haut</a>
-        <br>
         {% if page.url != "/" %}
-          <a href="{{ site.baseurl }}/">Retour à l'accueil</a>
+          <a href="{{ site.baseurl }}/">Retour à l'accueil</a><br>
         {% endif %}
+        <a href="#top">Retour en haut</a><br>
+        <a href="/historique">Historique du site</a>
       </div>
     </main>
   </body>

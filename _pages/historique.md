@@ -4,13 +4,17 @@ title: Historique
 permalink: historique
 ---
 
+**Samedi 27 juillet 2024**
+
+Refonte des pages [Oraux](/oraux).
+
 **Vendredi 26 juillet 2024**
 
 Ajout de l'exercice : [Moyennes arithmétique, géométrique, harmonique et quadratiques de deux nombres](/calculs-algebriques-et-trigonometrie#moyennes-arithmetique-geometrique-harmonique-quadratique).
 
 **Jeudi 25 juillet 2024**
 
-Ajout du chapitre : [Oraux rapides](/oraux-rapides).
+Ajout de tous les chapitres d'[oraux](/oraux).
 
 **Mercredi 24 juillet 2024**
 
@@ -30,7 +34,7 @@ Ajout de l'exercice : [Équivalent de la partie fractionnaire de $n!e$](/calculs
 
 **Samedi 20 juillet 2024**
 
-Ajout de l'exercice oral : [PC X-ESPCI 2023 - Suite de fonctions et convergence uniforme des dérivées vers 0](/oraux#beos-7413).
+Ajout de l'exercice oral : [X-ESPCI 2023 - Suite de fonctions et convergence uniforme des dérivées vers 0](/oraux-pc#beos-7413).
 
 **Vendredi 19 juillet 2024**
 
@@ -42,11 +46,11 @@ Ajout de l'exercice : [Une fonction bornée à dérivée seconde bornée a une d
 
 **Mercredi 17 juillet 2024**
 
-Ajout de l'exercice oral : [MP Mines-Ponts 2024 - Nombres ne contenant pas un chiffre donné](/oraux#beos-8272).
+Ajout de l'exercice oral : [Mines-Ponts 2024 - Nombres ne contenant pas un chiffre donné](/oraux-mp#beos-8272).
 
 **Mardi 16 juillet 2024**
 
-Ajout de l'exercice oral : [PC X-ESPCI 2023 - Vitesse de convergence d'une suite récurrente](/oraux#beos-7214-1).
+Ajout de l'exercice oral : [X-ESPCI 2023 - Vitesse de convergence d'une suite récurrente](/oraux-pc#beos-7214-1).
 
 **Lundi 15 juillet 2024**
 
@@ -158,7 +162,7 @@ Ajout de l'exercice : [Caractérisation des projecteurs orthogonaux](/espaces-pr
 
 **Mardi 18 juin 2024**
 
-Ajout de l'exercice oral : [Mon oral ENS Ulm/Lyon/Paris-Saclay/Rennes](/oraux#mon-oral-ens-ulsr).
+Ajout de l'exercice oral : [Mon oral ENS Ulm/Lyon/Paris-Saclay/Rennes](/oraux-mp#mon-oral-ens-ulsr).
 
 **Lundi 17 juin 2024**
 

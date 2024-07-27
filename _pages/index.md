@@ -65,10 +65,7 @@ Bonne lecture et exploration des chapitres !
 - [Théorie des probabilités]({{ site.baseurl }}/theorie-des-probabilites)
   - [Probabilités]({{ site.baseurl }}/probabilites)
   - [Variables aléatoires]({{ site.baseurl }}/variables-aleatoires)
-- [Oraux de concours]({{ site.baseurl }}/oraux-de-concours)
-  - [Oraux rapides]({{ site.baseurl }}/oraux-rapides)
-  - [Oraux intermédiaires et avancés]({{ site.baseurl }}/oraux)
-
-<div style="text-align: right">
-  <a href="{{ site.baseurl }}/historique">Historique</a>
-</div>
+- [Oraux]({{ site.baseurl }}/oraux)
+  - [Oraux MP/MPI]({{ site.baseurl }}/oraux-mp)
+  - [Oraux PC]({{ site.baseurl }}/oraux-pc)
+  - [Oraux PSI]({{ site.baseurl }}/oraux-psi)

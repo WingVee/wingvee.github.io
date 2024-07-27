@@ -150,7 +150,7 @@ Bien qu'il est possible de le démontrer sans questions subsidiaires pour un pub
   <summary><b>Pour aller plus loin</b></summary>
     <ul>
       <li>
-        <a href="oraux#beos-7214-1">PC X-ESPCI 2023 - Vitesse de convergence d'une suite récurrente</a>
+        <a href="oraux-pc#beos-7214-1">X-ESPCI 2023 - Vitesse de convergence d'une suite récurrente</a>
       </li>
     </ul>
 </details>

@@ -56,7 +56,7 @@ $$\Big(\Vert f\Vert_{\infty} \leq M_0 \text{ et } \Vert f''\Vert_{\infty} \leq M
 				<a href="espaces-vectoriels-normes#fonctions-a-derivees-bornees">Fonctions à dérivées bornées (autour de l'inégalité de Landau–Kolmogorov)</a>
       </li>
       <li>
-				<a href="oraux#beos-7413">PC X-ESPCI 2023 - Suite de fonctions et convergence uniforme des dérivées vers 0</a>
+				<a href="oraux-pc#beos-7413">X-ESPCI 2023 - Suite de fonctions et convergence uniforme des dérivées vers 0</a>
       </li>
     </ul>
 </details>
