@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Dimanche 28 juillet 2024**
+
+Ajout de l'[icône](/assets/img/favicon.ico) du site.
+
 **Samedi 27 juillet 2024**
 
 Refonte des pages [Oraux](/oraux).
