@@ -34,6 +34,18 @@ redirect_from:
 
 ---
 
+<h3 id="beos-8252">
+  <a href="#beos-8252" class="header">
+  CCINP 2024 - Étude de $\displaystyle \sum_{n=1}^{+\infty} \frac{n^2}{n^2+1} x \exp(-nx)$</a>
+</h3>
+
+[Exercice traité ici.](suites-et-series-de-fonctions#etude-serie-fonctions-1)
+
+**Mots-clés** : séries de fonctions
+
+**Source** : <a href="https://beos.prepas.org/sujet.php?id=8252" target="_blank">BEOS 8252</a>
+
+---
 
 <h3 id="beos-7214-1">
   <a href="#beos-7214-1" class="header">

@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Lundi 29 juillet 2024**
+
+Ajout de l'exercice : [Étude de $\displaystyle \sum_{n=1}^{+\infty} \frac{n^2}{n^2+1} x \exp(-nx)$](/suites-et-series-de-fonctions#etude-serie-fonctions-1).
+
 **Dimanche 28 juillet 2024**
 
 Ajout de l'[icône](/assets/img/favicon.ico) du site.
