@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Mardi 30 juillet 2024**
+
+Ajout de l'exercice oral : [PSI Centrale-Supélec 2024 - Extrema de $(x^2+y^2)^x$](/oraux-psi#beos-8362).
+
 **Lundi 29 juillet 2024**
 
 Ajout de l'exercice : [Étude de $\displaystyle \sum_{n=1}^{+\infty} \frac{n^2}{n^2+1} x \exp(-nx)$](/suites-et-series-de-fonctions#etude-serie-fonctions-1).
@@ -42,7 +46,7 @@ Ajout de l'exercice : [Équivalent de la partie fractionnaire de $n!e$](/calculs
 
 **Samedi 20 juillet 2024**
 
-Ajout de l'exercice oral : [X-ESPCI 2023 - Suite de fonctions et convergence uniforme des dérivées vers 0](/oraux-pc#beos-7413).
+Ajout de l'exercice oral : [PC X-ESPCI 2023 - Suite de fonctions et convergence uniforme des dérivées vers 0](/oraux-pc#beos-7413).
 
 **Vendredi 19 juillet 2024**
 
@@ -54,11 +58,11 @@ Ajout de l'exercice : [Une fonction bornée à dérivée seconde bornée a une d
 
 **Mercredi 17 juillet 2024**
 
-Ajout de l'exercice oral : [Mines-Ponts 2024 - Nombres ne contenant pas un chiffre donné](/oraux-mp#beos-8272).
+Ajout de l'exercice oral : [MP Mines-Ponts 2024 - Nombres ne contenant pas un chiffre donné](/oraux-mp#beos-8272).
 
 **Mardi 16 juillet 2024**
 
-Ajout de l'exercice oral : [X-ESPCI 2023 - Vitesse de convergence d'une suite récurrente](/oraux-pc#beos-7214-1).
+Ajout de l'exercice oral : [PC X-ESPCI 2023 - Vitesse de convergence d'une suite récurrente](/oraux-pc#beos-7214-1).
 
 **Lundi 15 juillet 2024**
 
