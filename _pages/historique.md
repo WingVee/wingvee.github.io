@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Jeudi 1er août 2024**
+
+Ajout de l'exercice : [Déterminant de Vandermonde](/determinants#determinant-de-vandermonde).
+
 **Mercredi 31 juillet 2024**
 
 Ajout de l'exercice : [Théorème de Lucas (1878) - Reste modulo $p$ de $\displaystyle\binom{n}{k}$](/arithmetique-des-entiers#theoreme-de-lucas).

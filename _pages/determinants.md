@@ -10,6 +10,67 @@ redirect_from:
 
 ---
 
+<h3 id="determinant-de-vandermonde">
+  <a href="#determinant-de-vandermonde" class="header">
+  Déterminant de Vandermonde</a>
+</h3>
+
+Soit $a_1,\ldots,a_n\in\mathbb{C}$ (avec $n\geq 1$).
+
+On appelle déterminant de Vandermonde la quantité
+
+$$V(a_1,\ldots,a_n) = \left|\begin{matrix}
+1 & 1 & \cdots & 1 \\
+a_1 & a_2 & \cdots & a_n \\
+a_1^2 & a_2^2 & \cdots & a_n^2 \\
+\vdots & \vdots & \ddots & \vdots \\
+a_1^{n-1} & a_2^{n-1} & \cdots & a_n^{n-1}
+\end{matrix}\right| = \det((a_j^{i-1})_{1\leq i,j\leq n}).$$
+
+Montrer que
+
+$$V(a_1,\ldots,a_n) = \prod_{1\leq i<j\leq n} (a_j-a_i).$$
+
+<details>
+  <summary><b>Indications</b></summary>
+    Considérer le polynôme $P(X) = V(a_1,\ldots,a_{n-1},X)$, développer par rapport à la dernière colonne et analyser les racines.
+</details>
+
+<details>
+  <summary><b>Solution</b></summary>
+    On prouve par récurrence sur $n\geq 1$.<br>
+    Pour $n=1$, on a $\displaystyle V(a_1) = 1 = \prod_{1\leq i<j\leq 1} (a_j-a_i)$ (produit vide).<br>
+    Supposons que la formule est vraie pour $n-1\geq 1$.<br>
+    S'il existe $i,j\in\{1,\ldots,n\}$ distincts tels que $a_i=a_j$, alors deux colonnes sont égales et le déterminant est nul et la formule est vérifiée.<br>
+    On suppose désormais que les $a_i$ sont distincts deux à deux.<br>
+    En développant par rapport à la dernière colonne, on remarque que
+    $$x\in\mathbb C\mapsto V(a_1,\ldots,a_{n-1},x) = \left|\begin{matrix}
+    1 & 1 & \cdots & 1 \\
+    a_1 & a_2 & \cdots & x \\
+    a_1^2 & a_2^2 & \cdots & x^2 \\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_1^{n-1} & a_2^{n-1} & \cdots & x^{n-1}
+    \end{matrix}\right|$$
+    est une fonction polynomiale de degré au plus $n-1$.<br>
+    Ainsi, en posant $P(X) = V(a_1,\ldots,a_{n-1},X)$, on a $P\in\mathbb{C}_{n-1}[X]$.<br>
+    Le coefficient de $X^{n-1}$ dans $P$ vaut $V(a_1,\ldots,a_{n-1})$.<br>
+    Par hypothèse de récurrence, on a $\displaystyle V(a_1,\ldots,a_{n-1}) = \prod_{1\leq i<j\leq n-1} (a_j-a_i)\neq 0$ comme produit de termes non nuls, donc $P$ est de degré $n-1$.<br>
+    De plus, $P(a_i) = 0$ pour tout $1\leq i\leq n-1$ car deux colonnes sont égales lorsque $x=a_i$.<br>
+    Ainsi, puisque les $a_i$ sont distincts deux à deux, $P$ est scindé et on a
+    $$P(X) = V(a_1,\ldots,a_{n-1}) \prod_{1\leq k\leq n-1} (X-a_k).$$
+    D'où
+    $$\begin{align*}
+    V(a_1,\ldots,a_n) &= P(a_n)\\
+    &= V(a_1,\ldots,a_{n-1}) \prod_{1\leq k\leq n-1} (a_n-a_k)\\
+    &= \prod_{1\leq i<j\leq n-1} (a_j-a_i)\prod_{1\leq k\leq n-1} (a_n-a_k)\\
+    &= \prod_{1\leq i<j<n} (a_j-a_i)\prod_{1\leq i<j = n} (a_j-a_i)\\
+    &= \prod_{1\leq i<j\leq n} (a_j-a_i).
+    \end{align*}$$
+    Ce qui conclut la preuve par récurrence.
+</details>
+
+---
+
 <h3 id="determinant-application-transposee">
   <a href="#determinant-application-transposee" class="header">
   Déterminant de l'application transposée</a>
