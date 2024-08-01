@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Mercredi 31 juillet 2024**
+
+Ajout de l'exercice : [Théorème de Lucas (1878) - Reste modulo $p$ de $\displaystyle\binom{n}{k}$](/arithmetique-des-entiers#theoreme-de-lucas).
+
 **Mardi 30 juillet 2024**
 
 Ajout de l'exercice oral : [PSI Centrale-Supélec 2024 - Extrema de $(x^2+y^2)^x$](/oraux-psi#beos-8362).

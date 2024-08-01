@@ -99,6 +99,97 @@ Sens facile : Montrer que si $p$ n'est pas premier, alors $(p-1)!+1\not\equiv 0\
 
 ---
 
+<h3 id="theoreme-de-lucas">
+  <a href="#theoreme-de-lucas" class="header">
+  Théorème de Lucas (1878) - Reste modulo $p$ de $\displaystyle\binom{n}{k}$</a>
+</h3>
+
+Soient $n,k\in\mathbb{N}$ et $p$ un nombre premier.<br>
+Décomposons $n$ et $k$ en base $p$ :
+
+$$n = n_r p^r + n_{r-1} p^{r-1} + \ldots + n_1 p + n_0 \quad \text{et} \quad k = k_r p^r + k_{r-1} p^{r-1} + \ldots + k_1 p + k_0$$
+
+où $0\leq n_i,k_i<p$ pour tout $i\in\\{0,\ldots,r\\}$.
+
+L'objectif de cet exercice est de montrer le théorème de Lucas :
+
+$$\binom{n}{k}\equiv\prod_{i=0}^r\binom{n_i}{k_i}\ [p].$$
+
+1. Montrer que $(1+X)^p\equiv 1+X^p\ [p]$.
+
+2. Montrer que pour tout $i\in\mathbb{N}$, on a $(1+X)^{p^i}\equiv 1+X^{p^i}\ [p]$.
+
+3. Montrer que $\displaystyle\sum_{k=0}^{n}\binom{n}{k}X^k\equiv\sum_{k=0}^{n}\left(\prod_{i=0}^r\binom{n_i}{k_i}\right)X^k\ [p]$.
+
+4. En déduire le théorème de Lucas.
+
+<details>
+  <summary><b>Indications</b></summary>
+    <ol>
+      <li>
+        Montrer que $p$ divise $\binom{p}{k}$ pour $0<k<p$.
+      </li>
+      <li>
+        Récurrence.
+      </li>
+      <li>
+        Binôme de Newton.
+      </li>
+      <li>
+        Immédiat.
+      </li>
+    </ol>
+</details>
+
+<details>
+  <summary><b>Solution</b></summary>
+    <ol>
+      <li>
+        D'après le binôme de Newton, on a $\displaystyle (1+X)^p = \sum_{k=0}^{p}\binom{p}{k}X^k$.<br>
+        Or, pour $0<k<p$, on a $\displaystyle \binom{p}{k} = \frac{p!}{k!(p-k)!} = \frac{p(p-1)\dots(p-k+1)}{k(k-1)\dots 1}\in\mathbb N$, dont le numérateur est divisible par $p$ mais pas le dénominateur, donc $p$ divise $\displaystyle\binom{p}{k}$ pour $0<k<p$.<br>
+        Remarque : on pouvait aussi voir que $\displaystyle k\binom{p}{k} = p\binom{p-1}{k-1}$ donc $p$ divise $\displaystyle k\binom{p}{k}$ et donc $p$ divise $\displaystyle\binom{p}{k}$ d'après le lemme de Gauss ($0<k<p$ et $p$ est premier).<br>
+        Ainsi, on a $(1+X)^p\equiv 1+X^p\ [p]$.
+      </li>
+      <li>
+        Montrons le résultat par récurrence sur $i\in\mathbb{N}$.<br>
+        Pour $i=0$, c'est immédiat.<br>
+        Supposons que $(1+X)^{p^i}\equiv 1+X^{p^i}\ [p]$ pour un certain $i\in\mathbb{N}$. On a :
+        $$\begin{align*}
+        (1+X)^{p^{i+1}} &= ((1+X)^{p^i})^{p}\\
+        &\equiv (1+X^{p^i})^{p}\ [p] \quad \text{(hypothèse de récurrence)}\\
+        &\equiv 1+\left(X^{p^i}\right)^p\ [p] \quad \text{(d'après la question précédente)}\\
+        &\equiv 1+X^{p^{i+1}}\ [p].
+        \end{align*}$$
+        Ainsi, pour tout $i\in\mathbb{N}$, on a $(1+X)^{p^i}\equiv 1+X^{p^i}\ [p]$.
+      </li>
+      <li> Avec le binôme de Newton, et en utilisant la question précédente, on a :
+        $$\begin{align*}
+        \sum_{k=0}^{n}\binom{n}{k}X^k &= \left(1+X\right)^n\\
+        &= \left(1+X\right)^{n_r p^r + n_{r-1} p^{r-1} + \ldots + n_1 p + n_0}\\
+        &= \prod_{i=0}^r\left(1+X\right)^{n_i p^i}\\
+        &\equiv \prod_{i=0}^r\left(1+X^{p^i}\right)^{n_i}\ [p] \qquad \text{(question 2)}.
+        \end{align*}$$
+        Or,
+        $$\begin{align*}
+        \prod_{i=0}^r\left(1+X^{p^i}\right)^{n_i} &= \prod_{i=0}^r \sum_{k_i=0}^{n_i}\binom{n_i}{k_i}X^{k_i p^i} \qquad \text{(binôme de Newton)}\\
+        &= \prod_{i=0}^r \sum_{k_i=0}^{p-1}\binom{n_i}{k_i}X^{k_i p^i} \qquad \text{(car $\binom{n_i}{k_i}=0$ pour $n_i < k_i \leq p-1$)}\\
+        &= \sum_{0\leq k_0,\dots,k_r\leq p-1}\left(\prod_{i=0}^r\binom{n_i}{k_i}X^{k_i p^i}\right) \qquad \text{(distributivité)}\\
+        &= \sum_{0\leq k_0,\dots,k_r\leq p-1}\left(\prod_{i=0}^r\binom{n_i}{k_i}\right)X^{k_0 + k_1 p + \ldots + k_r p^r}\\
+        &= \sum_{k=0}^{p^{r+1}-1}\left(\prod_{i=0}^r\binom{n_i}{k_i}\right)X^k \qquad \text{(bijection entre les indices)}\\
+        &= \sum_{k=0}^{n}\left(\prod_{i=0}^r\binom{n_i}{k_i}\right)X^k \qquad \text{(car $\displaystyle \prod_{i=0}^r\left(1+X^{p^i}\right)^{n_i}$ polynôme de degré $n$)}.
+        \end{align*}$$
+        D'où
+        $$\sum_{k=0}^{n}\binom{n}{k}X^k\equiv\sum_{k=0}^{n}\left(\prod_{i=0}^r\binom{n_i}{k_i}\right)X^k\ [p].$$
+      </li>
+      <li>
+        Par identification des coefficients de $X^k$ dans les deux membres de l'équation précédente, on obtient le théorème de Lucas :
+        $$\binom{n}{k}\equiv\prod_{i=0}^r\binom{n_i}{k_i}\ [p].$$
+      </li>
+    </ol>
+</details>
+
+---
+
 <h3 id="formule-de-legendre">
   <a href="#formule-de-legendre" class="header">
   Formule de Legendre (1830) - Valuation $p$-adique de $n!$</a>
