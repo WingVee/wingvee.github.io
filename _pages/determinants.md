@@ -15,7 +15,7 @@ redirect_from:
   Déterminant de Vandermonde</a>
 </h3>
 
-Soit $a_1,\ldots,a_n\in\mathbb{C}$ (avec $n\geq 1$).
+Soient $a_1,\ldots,a_n\in\mathbb{C}$ (avec $n\geq 1$).
 
 On appelle déterminant de Vandermonde la quantité
 
@@ -62,11 +62,84 @@ $$V(a_1,\ldots,a_n) = \prod_{1\leq i<j\leq n} (a_j-a_i).$$
     $$\begin{align*}
     V(a_1,\ldots,a_n) &= P(a_n)\\
     &= V(a_1,\ldots,a_{n-1}) \prod_{1\leq k\leq n-1} (a_n-a_k)\\
-    &= \prod_{1\leq i<j\leq n-1} (a_j-a_i)\prod_{1\leq k\leq n-1} (a_n-a_k)\\
-    &= \prod_{1\leq i<j<n} (a_j-a_i)\prod_{1\leq i<j = n} (a_j-a_i)\\
-    &= \prod_{1\leq i<j\leq n} (a_j-a_i).
+    &= \prod_{1\leq i < j \leq n-1} (a_j-a_i)\prod_{1\leq k\leq n-1} (a_n-a_k)\\
+    &= \prod_{1\leq i < j < n} (a_j-a_i)\prod_{1\leq i < j = n} (a_j-a_i)\\
+    &= \prod_{1\leq i < j\leq n} (a_j-a_i).
     \end{align*}$$
     Ce qui conclut la preuve par récurrence.
+</details>
+
+<details>
+  <summary><b>Pour aller plus loin</b></summary>
+    <ul>
+      <li>
+        <a href="#determinant-somme-2-vandermonde">Déterminant d'une somme de deux matrices</a>
+      </li>
+    </ul>
+</details>
+
+---
+
+<h3 id="determinant-somme-2-vandermonde">
+  <a href="#determinant-somme-2-vandermonde" class="header">
+  Déterminant d'une somme de deux matrices</a>
+</h3>
+
+Soient $a_1,\ldots,a_n\in\mathbb{C}$ (avec $n\geq 1$).
+
+Déterminer le déterminant de la matrice
+
+$$ A = \begin{pmatrix}
+a_1 + a_2 & a_2 + a_3 & \cdots & a_n + a_1 \\
+a_1^2 + a_2^2 & a_2^2 + a_3^2 & \cdots & a_n^2 + a_1^2 \\
+\vdots & \vdots & \ddots & \vdots \\
+a_1^n + a_2^n & a_2^n + a_3^n & \cdots & a_n^n + a_1^n \\
+\end{pmatrix}.$$
+
+Dans quels cas $A$ est-elle inversible ?
+
+<details>
+  <summary><b>Remarques</b></summary>
+    Cet exercice semblerait avoir été donné à l'oral MP Mines-Ponts 2024 (voir <a href="https://beos.prepas.org/sujet.php?id=8418" target="_blank">BEOS 8418</a>).
+</details>
+
+<details>
+  <summary><b>Indications</b></summary>
+    Le déterminant est $n$-linéaire et alterné en les colonnes.<br>
+    Connaître le déterminant de Vandermonde (voir <a href="#determinant-de-vandermonde">exercice précédent</a>).
+</details>
+
+<details>
+  <summary><b>Solution</b></summary>
+    Notons $C_i = \begin{pmatrix} a_i\\ a_i^2\\ \vdots\\ a_i^n \end{pmatrix}$ pour tout $1\leq i\leq n$.<br>
+    Alors
+    $$A = \left[C_1 + C_2 | C_2 + C_3 | \cdots | C_n + C_1\right]$$
+    (notation pour dire que $A$ est formée des colonnes $C_1 + C_2$, $C_2 + C_3$, $\ldots$, $C_n + C_1$).<br>
+    Par $n$-linéarité du déterminant, on a
+    $$\det(A) = \sum_{i_1\in\{1,2\}}\sum_{i_2\in\{2,3\}}\cdots\sum_{i_n\in\{n,1\}}\det\left[C_{i_1} | C_{i_2} | \cdots | C_{i_n}\right].$$
+    Dès qu'il existe $i_j$ et $i_k$ tels que $i_j = i_k$ pour $j\neq k$, le déterminant est nul car deux colonnes sont égales.<br>
+    Si $i_1=1$, alors il faut que $i_n = n$ pour que le déterminant soit non nul, et donc $i_{n-1} = n-1$, etc.<br>
+    Si $i_1=2$, alors il faut que $i_2 = 3$, $i_3 = 4$, etc.<br>
+    Donc
+    $$\det(A) = \det\left[C_1 | C_2 | \cdots | C_n\right] + \det\left[C_2 | C_3 | \cdots | C_1\right].$$
+    En échangeant les colonnes de la deuxième matrice $n-1$ fois, on obtient
+    $$\det(A) = \det\left[C_1 | C_2 | \cdots | C_n\right] + (-1)^{n-1}\det\left[C_1 | C_2 | \cdots | C_n\right] = (1+(-1)^{n-1})\det\left[C_1 | C_2 | \cdots | C_n\right].$$
+    Ainsi, si $n$ est pair, on a $\det(A) = 0$.<br>
+    Si $n$ est impair, on doit calculer
+    $$\det\left[C_1 | C_2 | \cdots | C_n\right] = \det\begin{pmatrix}
+    a_1 & a_2 & \cdots & a_n \\
+    a_1^2 & a_2^2 & \cdots & a_n^2 \\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_1^n & a_2^n & \cdots & a_n^n
+    \end{pmatrix}=a_1\dots a_n\det\begin{pmatrix}
+    1 & 1 & \cdots & 1 \\
+    a_1 & a_2 & \cdots & a_n \\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_1^{n-1} & a_2^{n-1} & \cdots & a_n^{n-1}.
+    \end{pmatrix}$$
+    En reconnaissant le déterminant de Vandermonde (traité dans l'<a href="#determinant-de-vandermonde">exercice précédent</a>), on a donc
+    $$\det(A) = 2\prod_{k=1}^n a_k\prod_{1\leq i<j\leq n} (a_j-a_i).$$
+    Ainsi, $A$ est inversible si et seulement si $n$ est impair, les $a_i$ sont deux à deux distincts et tous non nuls.
 </details>
 
 ---

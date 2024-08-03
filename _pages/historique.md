@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Vendredi 2 août 2024**
+
+Ajout de l'exercice : [Déterminant d'une somme de deux matrices](/determinants#determinant-somme-2-vandermonde).
+
 **Jeudi 1er août 2024**
 
 Ajout de l'exercice : [Déterminant de Vandermonde](/determinants#determinant-de-vandermonde).

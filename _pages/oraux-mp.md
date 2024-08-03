@@ -9,6 +9,19 @@ redirect_from:
 
 ---
 
+<h3 id="beos-8418-2">
+  <a href="#beos-8418-2" class="header">
+  Mines-Ponts 2024 - Déterminant d'une somme de deux matrices</a>
+</h3>
+
+[Exercice traité ici.](determinants#determinant-somme-2-vandermonde)
+
+**Mots-clés** : déterminant
+
+**Source** : <a href="https://beos.prepas.org/sujet.php?id=8418" target="_blank">BEOS 8418</a>
+
+---
+
 <h3 id="beos-8272">
   <a href="#beos-8272" class="header">
   Mines-Ponts 2024 - Nombres ne contenant pas un chiffre donné</a>
