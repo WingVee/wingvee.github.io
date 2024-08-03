@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Samdi 3 août 2024**
+
+Ajout de l'exercice : [Polynôme positif et somme de deux carrés](/arithmetique-des-polynomes#polynome-positif-somme-de-deux-carres).
+
 **Vendredi 2 août 2024**
 
 Ajout de l'exercice : [Déterminant d'une somme de deux matrices](/determinants#determinant-somme-2-vandermonde).
