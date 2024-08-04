@@ -107,6 +107,64 @@ avec égalité si et seulement si $a=b$.
 
 ---
 
+<h3 id="troisieme-identite-remarquable-generalisee">
+  <a href="#troisieme-identite-remarquable-generalisee" class="header">
+  Troisième identité remarquable généralisée - Différence de puissances $n$-ièmes</a>
+</h3>
+
+<ol>
+  <li>
+    Montrer que pour tous nombres réels $a$ et $b$, on a
+    $$a^{3}-b^{3}=(a-b)(a^{2}+ab+b^{2})\\a^{3}+b^{3}=(a+b)(a^{2}-ab+b^{2}).$$
+  </li>
+  <li>
+    Plus généralement, montrer que pour tous nombres réels $a$ et $b$ et tout entier naturel $n$, on a
+    $$a^{n}-b^{n}=(a-b)\left(a^{n-1}+a^{n-2}b+a^{n-3}b^{2}+\ldots+ab^{n-2}+b^{n-1}\right)=(a-b)\sum_{k=0}^{n-1}a^{n-1-k}b^{k}.$$
+  </li>
+  <li>
+    Montrer que pour tout entier $n$ impair, on a
+    $$a^{n}+b^{n}=(a+b)\left(a^{n-1}-a^{n-2}b+a^{n-3}b^{2}-\ldots+ab^{n-2}-b^{n-1}\right)=(a+b)\sum_{k=0}^{n-1}(-1)^{k}a^{n-1-k}b^{k}.$$
+  </li>
+</ol>
+
+<details>
+  <summary><b>Remarques</b></summary>
+    Ces identités généralisent celle bien connue pour $n=2$ : $a^2-b^2=(a-b)(a+b)$.<br>
+    De plus, ces formules sont vraies pour $a$ et $b$ dans $\mathbb{C}$, ou plus généralement dans un anneau commutatif (en gros une structure algébrique où l'on peut additionner et multiplier, avec la distributivité et la commutativité) ou dans un anneau quelconque où $a$ et $b$ commutent.
+</details>
+
+<details>
+  <summary><b>Solution</b></summary>
+    <ol>
+      <li>
+        On développe les produits :
+        $$\begin{align*}
+          (a-b)(a^{2}+ab+b^{2}) &= a^{3}+a^{2}b+ab^{2}-a^{2}b-ab^{2}-b^{3}\\
+          &= a^{3}-b^{3}.
+        \end{align*}$$
+        $$\begin{align*}
+          (a+b)(a^{2}-ab+b^{2}) &= a^{3}-a^{2}b+ab^{2}+a^{2}b-ab^{2}-b^{3}\\
+          &= a^{3}+b^{3}.
+        \end{align*}$$
+      </li>
+      <li>
+        On développe :
+        $$\begin{align*}
+          (a-b)\sum_{k=0}^{n-1}a^{n-1-k}b^{k} &= \sum_{k=0}^{n-1}a^{n-k}b^{k}-\sum_{k=0}^{n-1}a^{n-1-k}b^{k+1}\\
+          &= \sum_{k=0}^{n-1}a^{n-k}b^{k} - \sum_{k=1}^{n}a^{n-k}b^{k}\\
+          &= a^{n}b^{0}+a^{n-1}b^{1}+\ldots+a^{1}b^{n-1} - a^{n-1}b^{1}-\ldots-a^{1}b^{n-1}-a^{0}b^{n}\\
+          &= a^{n}-b^{n}.
+        \end{align*}$$
+      </li>
+      <li>
+        Lorque $n$ est impair, on remplace $b$ par $-b$ dans la formule précédente :
+        $$a^{n}+b^{n} = a^n-(-b)^n = (a-(-b))\sum_{k=0}^{n-1}a^{n-1-k}(-b)^{k} = (a+b)\sum_{k=0}^{n-1}(-1)^{k}a^{n-1-k}b^{k}.$$
+      </li>
+    </ol>
+</details>
+
+---
+
 <h3 id="formules-de-faulhaber-123">
   <a href="#formules-de-faulhaber-123" class="header">
   Formules de Faulhaber (exposants 1,2,3)</a>

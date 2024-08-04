@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Dimanche 4 août 2024**
+
+Ajout de l'exercice : [Troisième identité remarquable généralisée - Différence de puissances $n$-ièmes](/calculs-algebriques-et-trigonometrie#troisieme-identite-remarquable-generalisee).
+
 **Samdi 3 août 2024**
 
 Ajout de l'exercice : [Polynôme positif et somme de deux carrés](/arithmetique-des-polynomes#polynome-positif-somme-de-deux-carres).
