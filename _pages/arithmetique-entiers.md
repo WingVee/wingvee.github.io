@@ -308,4 +308,91 @@ $$v_p(n!)=\sum_{k=1}^{\infty}\left\lfloor\frac{n}{p^k}\right\rfloor.$$
     D'où la formule alternative de Legendre.
 </details>
 
+<details>
+  <summary><b>Pour aller plus loin</b></summary>
+    <ul>
+      <li>
+        <a href="#theoreme-de-kummer">Théorème de Kummer (1852) - Valuation $p$-adique de $\binom{n}{k}$</a>
+      </li>
+    </ul>
+</details>
+
+---
+
+<h3 id="theoreme-de-kummer">
+  <a href="#theoreme-de-kummer" class="header">
+  Théorème de Kummer (1852) - Valuation $p$-adique de $\binom{n}{k}$</a>
+</h3>
+
+Soient $n\in\mathbb{N}^*$ et $p$ un nombre premier.<br>
+On note $v_p(n)$ la valuation $p$-adique de $n$, c'est-à-dire l'exposant de $p$ dans la décomposition en facteurs premiers de $n$ (de manière équivalente, le plus grand entier $j$ tel que $p^j$ divise $n$).<br>
+Soit $k\in\{0,\ldots,n\}$.
+
+Montrer les deux formulations du théorème de Kummer :
+
+<ol>
+  <li>
+    En notant $s_p(n)$ la somme des chiffres de l'écriture de $n$ en base $p$, on a :
+    $$v_p\left(\binom{n}{k}\right) = \frac{s_p(k)+s_p(n-k)-s_p(n)}{p-1}.$$
+  </li>
+  <li>
+    $\displaystyle v_p\left(\binom{n}{k}\right)$ est égale au nombre de retenues lors de l'addition de $k$ et $n-k$ en base $p$.
+  </li>
+</ol>
+
+On pourra admettre la forme alternative de la formule de Legendre (traitée dans [l'exercice précédent](#formule-de-legendre-2)) :
+
+$$v_p(n!)=\frac{n-s_p(n)}{p-1}.$$
+
+<details>
+  <summary><b>Indications</b></summary>
+    <ol>
+      <li>
+        Utiliser la propriété $v_p(ab)=v_p(a)+v_p(b)$ pour $a,b\in\mathbb{N}^*$.
+      </li>
+      <li>
+        Écrire $k$ et $n-k$ en base $p$ et compter le nombre de retenues lors de l'addition.
+      </li>
+    </ol>
+</details>
+
+<details>
+  <summary><b>Solution</b></summary>
+    <ol>
+      <li>
+        On a :
+        $$\begin{align*}
+        v_p\left(\binom{n}{k}\right) &= v_p\left(\frac{n!}{k!(n-k)!}\right)\\
+        &= v_p(n!)-v_p(k!)-v_p((n-k)!) \qquad \text{(car $v_p(ab)=v_p(a)+v_p(b)$)}\\
+        &= \frac{n-s_p(n)}{p-1} - \frac{k-s_p(k)}{p-1} - \frac{n-k-s_p(n-k)}{p-1} \qquad \text{(formule de Legendre)}\\
+        &= \frac{s_p(k)+s_p(n-k)-s_p(n)}{p-1}.
+        \end{align*}$$
+      </li>
+      <li>
+        Écrivons $k$, $n-k$ et $n$ en base $p$ :<br>
+        $$\begin{align*}
+        k &= \overline{a_r\dots a_1a_0} & (0\leq a_j<p)\\
+        n-k &= \overline{b_r\dots b_1b_0} & (0\leq b_j<p)\\
+        n &= \overline{c_r\dots c_1c_0} & (0\leq c_j<p, c_r\neq 0).
+        \end{align*}$$
+        D'après les règles de l'addition en base $p$ (similaires à celles en base 10), on a :
+        $$c_0 \equiv a_0 + b_0\ [p]$$
+        et pour tout $j\in\{1,\ldots,r\}$
+        $$c_j \equiv a_j + b_j + \delta_{j-1}\ [p]$$
+        où l'on pose $\delta_{-1} = 0$ et
+        $$\delta_j = \begin{cases} 1 & \text{si } a_j+b_j+\delta_{j-1}\geq p \\ 0 & \text{sinon}\end{cases} \quad \text{(c'est la retenue)}.$$
+        En remarquant que $0 \leq a_j + b_j + \delta_{j-1} < 2p$, on a :
+        $$c_j = \begin{cases} a_j + b_j + \delta_{j-1} & \text{si } a_j + b_j + \delta_{j-1} < p \\ a_j + b_j + \delta_{j-1} - p & \text{sinon}\end{cases}.$$
+        Autrement dit :
+        $$c_j = (a_j + b_j + \delta_{j-1}) - \delta_j p.$$
+        Ainsi, en sommant sur les chiffres, et sachant que $\delta_{-1} = 0$ et $\delta_r = 0$ :
+        $$s_p(n) = \sum_{j=0}^r c_j = \sum_{j=0}^r (a_j + b_j + \delta_{j-1}) - \delta_j p = s_p(k) + s_p(n-k) - \sum_{j=0}^{r-1}(p-1)\delta_j.$$
+        D'où
+        $$\sum_{j=0}^{r-1}\delta_j = \frac{s_p(k) + s_p(n-k) - s_p(n)}{p-1},$$
+        i.e. le nombre de retenues lors de l'addition de $k$ et $n-k$ en base $p$ est
+        $$\displaystyle\frac{s_p(k) + s_p(n-k) - s_p(n)}{p-1} = v_p\left(\binom{n}{k}\right).$$
+      </li>
+    </ol>
+</details>
+
 ---
