@@ -396,3 +396,60 @@ $$v_p(n!)=\frac{n-s_p(n)}{p-1}.$$
 </details>
 
 ---
+
+<h3 id="sommes-de-puissances-dans-zpz">
+  <a href="#sommes-de-puissances-dans-zpz" class="header">
+  Sommes de puissances dans $\mathbb{Z}/p\mathbb{Z}$</a>
+</h3>
+
+Soit $p$ un nombre premier. Que valent ces sommes dans $\mathbb{Z}/p\mathbb{Z}$ ?
+
+1. $\displaystyle\sum_{k=1}^p \overline k$.
+2. $\displaystyle\sum_{k=1}^p \overline k^2$.
+3. $\displaystyle\sum_{k=1}^p \overline k^3$.
+
+<details>
+  <summary>Rappel des formules de Faulhaber (pour les exposants 1,2,3) :</summary>
+    Les <a href="https://fr.wikipedia.org/wiki/Formule_de_Faulhaber" target="_blank">formules de Faulhaber</a> expriment les sommes des puissances $j$-èmes des entiers de $1$ à $n$ sous forme de fonction polynomiale en $n$ (de degré $j+1$).<br>
+    Ici, pour $j=1,2,3$, on a dans $\mathbb{Z}$ :
+    $$\sum_{k=1}^n k = \frac{n(n+1)}{2} \quad,\quad \sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6} \quad,\quad \sum_{k=1}^n k^3 = \left(\frac{n(n+1)}{2}\right)^2.$$
+</details>
+
+<details>
+  <summary><b>Indications</b></summary>
+    Faire des disjonctions de cas sur $p$ et voir quand certaines fractions sont entières.
+</details>
+
+<details>
+  <summary><b>Solution</b></summary>
+    <ol>
+      <li>
+        On a
+        $$\sum_{k=1}^p \overline k = \overline{\sum_{k=1}^p k} = \overline{\frac{p(p+1)}{2}}.$$
+        Si $p=2$, on a $\overline{\frac{p(p+1)}{2}} = \overline{\frac{2(2+1)}{2}} = \overline{3} = \overline{1}$.<br>
+        Sinon, $p$ est impair, donc $\overline{\frac{p(p+1)}{2}} = \overline{p}\cdot\overline{\frac{p+1}{2}} = \overline{0}\cdot\overline{\frac{p+1}{2}} = \overline{0}$.<br>
+        Donc
+        $$\displaystyle\sum_{k=1}^p \overline k = \begin{cases} \overline{1} & \text{si } p=2 \\ \overline{0} & \text{sinon}\end{cases}.$$
+      </li>
+      <li>
+        On a
+        $$\sum_{k=1}^p \overline k^2 = \overline{\sum_{k=1}^p k^2} = \overline{\frac{p(p+1)(2p+1)}{6}}.$$
+        Si $p=2$, on a $\overline{\frac{p(p+1)(2p+1)}{6}} = \overline{\frac{2(2+1)(2\cdot 2+1)}{6}} = \overline{5} = \overline{1}$.<br>
+        Si $p=3$, on a $\overline{\frac{p(p+1)(2p+1)}{6}} = \overline{\frac{3(3+1)(2\cdot 3+1)}{6}} = \overline{\frac{3\cdot 4}{6}}\cdot\overline{7} = \overline{2}\cdot\overline{7} = \overline{14} = \overline{2}$.<br>
+        Sinon, $p$ est impair et n'est pas un multiple de $3$.
+        On a alors 6 divise $(p+1)(2p+1)$ car $2|p+1$ et, si $p\equiv 1\ [3]$, alors $3|2p+1$, et si $p\equiv 2\ [3]$, alors $3|p+1$, donc $3|(p+1)(2p+1)$ dans tous les cas.<br>
+        Ainsi, $\overline{\frac{p(p+1)(2p+1)}{6}} = \overline{p}\cdot\overline{\frac{(p+1)(2p+1)}{6}} = \overline{0}\cdot\overline{\frac{(p+1)(2p+1)}{6}} = \overline{0}$.<br>
+        Donc
+        $$\displaystyle\sum_{k=1}^p \overline k^2 = \begin{cases} \overline{1} & \text{si } p=2 \\ \overline{2} & \text{si } p=3 \\ \overline{0} & \text {sinon} \end{cases}.$$
+      </li>
+      <li>
+        On a
+        $$\sum_{k=1}^p \overline k^3 = \overline{\sum_{k=1}^p k^3} = \overline{\left(\frac{p(p+1)}{2}\right)^2}.$$
+        D'après les résultats pour l'exposant 1, on a $\overline{\frac{p(p+1)}{2}} = \overline{1}$ si $p=2$ et $\overline{0}$ sinon.<br>
+        Donc
+        $$\displaystyle\sum_{k=1}^p \overline k^3 = \begin{cases} \overline{1} & \text{si } p=2 \\ \overline{0} & \text{sinon}\end{cases}.$$
+      </li>
+    </ol>
+</details>
+
+---

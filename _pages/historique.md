@@ -4,6 +4,10 @@ title: Historique
 permalink: historique
 ---
 
+**Mardi 6 août 2024**
+
+Ajout de l'exercice : [Sommes de puissances dans $\mathbb{Z}/p\mathbb{Z}$](/arithmetique-des-entiers#sommes-de-puissances-dans-zpz).
+
 **Lundi 5 août 2024**
 
 Ajout de l'exercice : [Théorème de Kummer (1852) - Valuation $p$-adique de $\displaystyle\binom{n}{k}$](/arithmetique-des-entiers#theoreme-de-kummer).
